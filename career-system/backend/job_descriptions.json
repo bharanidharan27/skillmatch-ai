@@ -1,0 +1,608 @@
+[
+  {
+    "id": "jd-001",
+    "title": "Senior Java Developer",
+    "company": "NovaTech Solutions",
+    "category": "Java Developer",
+    "required_skills": [
+      "Java",
+      "Spring",
+      "Hibernate",
+      "SQL",
+      "REST",
+      "Git",
+      "Maven"
+    ],
+    "preferred_skills": [
+      "Microservices",
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "Kafka",
+      "JUnit"
+    ],
+    "experience_level": "Senior (5-8 years)",
+    "description": "We are looking for a Senior Java Developer to design and develop high-volume, low-latency enterprise applications. You will work on Spring Boot microservices, write clean and testable code, and collaborate with cross-functional teams."
+  },
+  {
+    "id": "jd-002",
+    "title": "Java Architect",
+    "company": "Apex Digital",
+    "category": "Java Developer",
+    "required_skills": [
+      "Java",
+      "Spring",
+      "Microservices",
+      "Design Patterns",
+      "SOA",
+      "Oracle",
+      "WebLogic"
+    ],
+    "preferred_skills": [
+      "Kubernetes",
+      "AWS",
+      "Kafka",
+      "EJB",
+      "JMS",
+      "System Design"
+    ],
+    "experience_level": "Lead (8+ years)",
+    "description": "Apex Digital seeks a Java Architect to lead system design for our next-generation trading platform. You will define architecture standards, mentor developers, and drive technical strategy across multiple teams."
+  },
+  {
+    "id": "jd-003",
+    "title": "Full-Stack Web Developer",
+    "company": "PixelForge Inc.",
+    "category": "Web Developer",
+    "required_skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "HTML",
+      "CSS",
+      "REST",
+      "Git"
+    ],
+    "preferred_skills": [
+      "TypeScript",
+      "Next.js",
+      "MongoDB",
+      "Docker",
+      "GraphQL",
+      "Jest"
+    ],
+    "experience_level": "Mid (3-5 years)",
+    "description": "PixelForge is hiring a Full-Stack Web Developer to build modern single-page applications. You will implement responsive UIs with React, build RESTful APIs with Node.js, and ensure performance across devices."
+  },
+  {
+    "id": "jd-004",
+    "title": "Front-End Developer",
+    "company": "BrightWeb Studios",
+    "category": "Web Developer",
+    "required_skills": [
+      "JavaScript",
+      "React",
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "Git"
+    ],
+    "preferred_skills": [
+      "Angular",
+      "Vue.js",
+      "SASS",
+      "Webpack",
+      "Jest",
+      "Cypress"
+    ],
+    "experience_level": "Mid (2-4 years)",
+    "description": "BrightWeb Studios needs a Front-End Developer who is passionate about pixel-perfect UI/UX. You will translate Figma designs into accessible, performant web applications using modern JavaScript frameworks."
+  },
+  {
+    "id": "jd-005",
+    "title": "Senior SQL Developer",
+    "company": "DataCore Analytics",
+    "category": "SQL Developer",
+    "required_skills": [
+      "SQL",
+      "PL/SQL",
+      "Oracle",
+      "SQL Server",
+      "Data Modeling",
+      "ETL"
+    ],
+    "preferred_skills": [
+      "Python",
+      "SSIS",
+      "Teradata",
+      "Data Warehousing",
+      "PostgreSQL"
+    ],
+    "experience_level": "Senior (5-7 years)",
+    "description": "DataCore Analytics is looking for a Senior SQL Developer to optimise complex queries, design star/snowflake schemas, and build ETL pipelines for our analytics platform."
+  },
+  {
+    "id": "jd-006",
+    "title": "Database Administrator",
+    "company": "VaultDB Corp.",
+    "category": "SQL Developer",
+    "required_skills": [
+      "SQL",
+      "Oracle",
+      "SQL Server",
+      "MySQL",
+      "Linux",
+      "Shell Scripting"
+    ],
+    "preferred_skills": [
+      "PostgreSQL",
+      "Redis",
+      "MongoDB",
+      "AWS",
+      "Terraform",
+      "Python"
+    ],
+    "experience_level": "Mid (3-6 years)",
+    "description": "VaultDB Corp. seeks a DBA to manage database infrastructure, implement backup/recovery strategies, monitor performance, and automate routine maintenance tasks."
+  },
+  {
+    "id": "jd-007",
+    "title": "IT Business Analyst",
+    "company": "Meridian Consulting",
+    "category": "Business Analyst",
+    "required_skills": [
+      "Requirements Gathering",
+      "Business Analysis",
+      "SQL",
+      "JIRA",
+      "Documentation",
+      "Agile"
+    ],
+    "preferred_skills": [
+      "Tableau",
+      "Python",
+      "UML",
+      "Visio",
+      "Power BI",
+      "Stakeholder Management"
+    ],
+    "experience_level": "Mid (3-5 years)",
+    "description": "Meridian Consulting is hiring an IT Business Analyst to bridge the gap between business stakeholders and development teams. You will elicit requirements, create user stories, and facilitate sprint ceremonies."
+  },
+  {
+    "id": "jd-008",
+    "title": "Senior Business Analyst",
+    "company": "Stratton & Partners",
+    "category": "Business Analyst",
+    "required_skills": [
+      "Business Analysis",
+      "Requirements Gathering",
+      "Stakeholder Management",
+      "Documentation",
+      "SQL",
+      "Agile"
+    ],
+    "preferred_skills": [
+      "Scrum",
+      "MS Excel",
+      "Visio",
+      "Salesforce",
+      "SAP",
+      "Risk Management"
+    ],
+    "experience_level": "Senior (5-8 years)",
+    "description": "Stratton & Partners seeks a Senior BA to lead requirements definition for large-scale digital transformation programs, manage stakeholder expectations, and drive process improvement initiatives."
+  },
+  {
+    "id": "jd-009",
+    "title": "Network Engineer",
+    "company": "InfraLink Technologies",
+    "category": "Network/Systems Admin",
+    "required_skills": [
+      "TCP/IP",
+      "Cisco",
+      "Firewall",
+      "VPN",
+      "DNS",
+      "DHCP",
+      "Linux"
+    ],
+    "preferred_skills": [
+      "AWS",
+      "VMware",
+      "Ansible",
+      "Nagios",
+      "Active Directory",
+      "Load Balancing"
+    ],
+    "experience_level": "Mid (3-5 years)",
+    "description": "InfraLink Technologies needs a Network Engineer to design, configure, and maintain enterprise LAN/WAN infrastructure including routers, switches, firewalls, and VPNs."
+  },
+  {
+    "id": "jd-010",
+    "title": "Systems Administrator",
+    "company": "CloudGrid Systems",
+    "category": "Network/Systems Admin",
+    "required_skills": [
+      "Linux",
+      "Windows",
+      "Active Directory",
+      "VMware",
+      "Shell Scripting",
+      "DNS"
+    ],
+    "preferred_skills": [
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "Ansible",
+      "AWS",
+      "PowerShell"
+    ],
+    "experience_level": "Mid (3-6 years)",
+    "description": "CloudGrid Systems is hiring a Systems Administrator to manage hybrid cloud infrastructure, automate provisioning, and ensure high availability of production systems."
+  },
+  {
+    "id": "jd-011",
+    "title": "ETL Developer",
+    "company": "DataStream Labs",
+    "category": "ETL Developer",
+    "required_skills": [
+      "ETL",
+      "Informatica",
+      "SQL",
+      "Data Warehousing",
+      "Oracle",
+      "Data Modeling"
+    ],
+    "preferred_skills": [
+      "SSIS",
+      "Python",
+      "Apache Spark",
+      "Hadoop",
+      "Hive",
+      "Airflow"
+    ],
+    "experience_level": "Mid (3-5 years)",
+    "description": "DataStream Labs seeks an ETL Developer to design and maintain data pipelines that feed our enterprise data warehouse. You will work with Informatica, write complex SQL, and ensure data quality at scale."
+  },
+  {
+    "id": "jd-012",
+    "title": "Data Engineer",
+    "company": "ScaleData Inc.",
+    "category": "ETL Developer",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Apache Spark",
+      "Hadoop",
+      "Kafka",
+      "Data Warehousing"
+    ],
+    "preferred_skills": [
+      "Airflow",
+      "Snowflake",
+      "AWS",
+      "Docker",
+      "Terraform",
+      "Data Modeling"
+    ],
+    "experience_level": "Senior (5-8 years)",
+    "description": "ScaleData Inc. is looking for a Data Engineer to build modern data infrastructure using Spark, Kafka, and cloud-native services. You will design real-time and batch pipelines for petabyte-scale datasets."
+  },
+  {
+    "id": "jd-013",
+    "title": "BI Developer",
+    "company": "InsightWave Analytics",
+    "category": "BI Developer",
+    "required_skills": [
+      "Tableau",
+      "SQL",
+      "Data Warehousing",
+      "Data Modeling",
+      "ETL",
+      "Power BI"
+    ],
+    "preferred_skills": [
+      "Python",
+      "SSRS",
+      "SSAS",
+      "Snowflake",
+      "Looker",
+      "Cognos"
+    ],
+    "experience_level": "Mid (3-5 years)",
+    "description": "InsightWave Analytics is hiring a BI Developer to create interactive dashboards, build semantic models, and deliver actionable insights to business stakeholders."
+  },
+  {
+    "id": "jd-014",
+    "title": "BI Analyst",
+    "company": "ClearVision Data",
+    "category": "BI Developer",
+    "required_skills": [
+      "SQL",
+      "Tableau",
+      "MS Excel",
+      "Business Analysis",
+      "Data Modeling"
+    ],
+    "preferred_skills": [
+      "Power BI",
+      "Python",
+      "OBIEE",
+      "Crystal Reports",
+      "SSIS"
+    ],
+    "experience_level": "Junior-Mid (1-4 years)",
+    "description": "ClearVision Data seeks a BI Analyst to build reports, analyse trends, and support data-driven decision-making for our Fortune 500 clients."
+  },
+  {
+    "id": "jd-015",
+    "title": "IT Project Manager",
+    "company": "Pinnacle PM Group",
+    "category": "Project Manager",
+    "required_skills": [
+      "Project Management",
+      "Agile",
+      "Scrum",
+      "JIRA",
+      "Stakeholder Management",
+      "Risk Management"
+    ],
+    "preferred_skills": [
+      "MS Project",
+      "Budget Management",
+      "Change Management",
+      "SAFe",
+      "Confluence"
+    ],
+    "experience_level": "Senior (5-10 years)",
+    "description": "Pinnacle PM Group is seeking an IT Project Manager to lead cross-functional teams on enterprise software delivery. PMP or CSM certification is a plus."
+  },
+  {
+    "id": "jd-016",
+    "title": "Scrum Master",
+    "company": "AgileFirst Corp.",
+    "category": "Project Manager",
+    "required_skills": [
+      "Scrum",
+      "Agile",
+      "JIRA",
+      "Communication",
+      "Teamwork",
+      "Leadership"
+    ],
+    "preferred_skills": [
+      "SAFe",
+      "Kanban",
+      "Confluence",
+      "Project Management",
+      "Mentoring"
+    ],
+    "experience_level": "Mid (3-6 years)",
+    "description": "AgileFirst Corp. needs a Scrum Master to facilitate agile ceremonies, remove impediments, and coach development teams on Scrum best practices."
+  },
+  {
+    "id": "jd-017",
+    "title": "Technical Recruiter",
+    "company": "TalentBridge HR",
+    "category": "Recruiter",
+    "required_skills": [
+      "Recruitment",
+      "Sourcing",
+      "Interviewing",
+      "Communication",
+      "LinkedIn Recruiter"
+    ],
+    "preferred_skills": [
+      "Taleo",
+      "iCIMS",
+      "ADP",
+      "Onboarding",
+      "Negotiation",
+      "MS Excel"
+    ],
+    "experience_level": "Mid (2-5 years)",
+    "description": "TalentBridge HR is hiring a Technical Recruiter to source, screen, and hire IT professionals. You will manage the full-cycle recruitment process for software engineering, data, and DevOps roles."
+  },
+  {
+    "id": "jd-018",
+    "title": "Senior Talent Acquisition Specialist",
+    "company": "PeopleFirst Inc.",
+    "category": "Recruiter",
+    "required_skills": [
+      "Recruitment",
+      "Sourcing",
+      "Stakeholder Management",
+      "Interviewing",
+      "Communication"
+    ],
+    "preferred_skills": [
+      "Workday",
+      "Salesforce",
+      "Negotiation",
+      "Employee Relations",
+      "Performance Management"
+    ],
+    "experience_level": "Senior (5-8 years)",
+    "description": "PeopleFirst Inc. seeks a Senior TA Specialist to develop recruiting strategies, build talent pipelines, and partner with hiring managers to fill critical roles."
+  },
+  {
+    "id": "jd-019",
+    "title": "Software Engineer Intern",
+    "company": "Google",
+    "category": "Java Developer",
+    "required_skills": [
+      "Python",
+      "Java",
+      "Data Structures",
+      "Algorithms",
+      "Git"
+    ],
+    "preferred_skills": [
+      "C++",
+      "Go",
+      "Linux",
+      "Docker",
+      "REST",
+      "SQL",
+      "System Design"
+    ],
+    "experience_level": "Intern (0-1 years)",
+    "description": "Google is seeking Software Engineer Interns to work on projects critical to Google's needs. You will design, develop, test, and deploy software solutions across search, machine learning, and large-scale distributed systems. Candidates should have strong fundamentals in data structures, algorithms, and one or more programming languages."
+  },
+  {
+    "id": "jd-020",
+    "title": "Software Developer Intern",
+    "company": "Microsoft",
+    "category": "Web Developer",
+    "required_skills": [
+      "JavaScript",
+      "Python",
+      "Git",
+      "Data Structures",
+      "Algorithms",
+      "REST"
+    ],
+    "preferred_skills": [
+      "TypeScript",
+      "React",
+      "Node.js",
+      "Azure",
+      "Docker",
+      "CI/CD",
+      "Agile"
+    ],
+    "experience_level": "Intern (0-1 years)",
+    "description": "Microsoft is hiring Software Developer Interns to build innovative features for products used by millions worldwide including Azure, Office, and Windows. You will write production-quality code, participate in code reviews and design discussions, and collaborate with cross-functional teams in an agile environment."
+  },
+  {
+    "id": "jd-021",
+    "title": "AI/ML Engineer Intern",
+    "company": "Meta",
+    "category": "Web Developer",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "TensorFlow",
+      "PyTorch",
+      "Git"
+    ],
+    "preferred_skills": [
+      "Deep Learning",
+      "Natural Language Processing",
+      "Computer Vision",
+      "Pandas",
+      "NumPy",
+      "scikit-learn",
+      "Hugging Face",
+      "AWS",
+      "Docker"
+    ],
+    "experience_level": "Intern (0-1 years)",
+    "description": "Meta is seeking AI/ML Engineer Interns to work alongside senior ML engineers on developing and optimizing AI models at unprecedented scale. You will conduct data preprocessing, implement neural network architectures, assist in model deployment, and contribute to cutting-edge research in deep learning, NLP, and computer vision."
+  },
+  {
+    "id": "jd-022",
+    "title": "Backend Engineer Intern",
+    "company": "ByteDance",
+    "category": "Java Developer",
+    "required_skills": [
+      "Python",
+      "Java",
+      "SQL",
+      "REST",
+      "Git",
+      "Data Structures"
+    ],
+    "preferred_skills": [
+      "Go",
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "MongoDB",
+      "PostgreSQL",
+      "Kafka",
+      "CI/CD",
+      "Linux"
+    ],
+    "experience_level": "Intern (0-1 years)",
+    "description": "ByteDance is looking for Backend Engineer Interns to assist in designing, developing, testing, and deploying scalable backend services. You will work with client-server architectures, build clean and well-documented APIs, collaborate with senior engineers on system design, and participate in code reviews and performance optimization."
+  },
+  {
+    "id": "jd-023",
+    "title": "Data Engineer Intern",
+    "company": "Amazon",
+    "category": "ETL Developer",
+    "required_skills": [
+      "SQL",
+      "Python",
+      "ETL",
+      "Data Warehousing",
+      "Git"
+    ],
+    "preferred_skills": [
+      "Apache Spark",
+      "Hadoop",
+      "AWS",
+      "Airflow",
+      "Tableau",
+      "Data Modeling",
+      "Kafka",
+      "Snowflake"
+    ],
+    "experience_level": "Intern (0-1 years)",
+    "description": "Amazon is hiring Data Engineer Interns to design, implement, and automate data pipelines that process millions of data points. You will build and maintain data schemas, operate internal data warehouses, create dashboards and reports for key business decisions, and work collaboratively with analysts and data scientists."
+  },
+  {
+    "id": "jd-024",
+    "title": "Frontend Developer Intern",
+    "company": "Spotify",
+    "category": "Web Developer",
+    "required_skills": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "React",
+      "Git"
+    ],
+    "preferred_skills": [
+      "TypeScript",
+      "Next.js",
+      "Node.js",
+      "REST",
+      "Jest",
+      "SASS",
+      "Webpack",
+      "Agile"
+    ],
+    "experience_level": "Intern (0-1 years)",
+    "description": "Spotify is seeking Frontend Developer Interns to help build responsive, accessible web interfaces used by millions of music lovers. You will implement UI components with React, translate design mockups into performant code, write unit tests, and collaborate with designers and backend engineers to deliver seamless user experiences across devices."
+  },
+  {
+    "id": "jd-025",
+    "title": "Cloud/DevOps Engineer Intern",
+    "company": "IBM",
+    "category": "Network/Systems Admin",
+    "required_skills": [
+      "Linux",
+      "Python",
+      "Git",
+      "Docker",
+      "Shell Scripting"
+    ],
+    "preferred_skills": [
+      "Kubernetes",
+      "AWS",
+      "Azure",
+      "Terraform",
+      "Jenkins",
+      "CI/CD",
+      "Ansible",
+      "Prometheus",
+      "Grafana"
+    ],
+    "experience_level": "Intern (0-1 years)",
+    "description": "IBM is hiring Cloud/DevOps Engineer Interns to work with cloud-native technologies and help automate infrastructure deployment. You will create and configure IaaS, PaaS, and SaaS applications, assist in building CI/CD pipelines, monitor system health, and gain hands-on experience with container orchestration and infrastructure as code in a large-scale enterprise environment."
+  }
+]

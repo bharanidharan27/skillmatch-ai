@@ -1,0 +1,28 @@
+{
+  "multi_agent_precision": {
+    "P@1": 0.27,
+    "P@3": 0.249,
+    "P@5": 0.227,
+    "P@10": 0.1639
+  },
+  "baseline_precision": {
+    "P@1": 0.2319,
+    "P@3": 0.1995,
+    "P@5": 0.1639,
+    "P@10": 0.1208
+  },
+  "ranking_correlation": {
+    "kendall_tau_mean": 0.3867,
+    "spearman_rho_mean": 0.4853,
+    "n_compared": 2700
+  },
+  "clustering": {
+    "kmeans_silhouette": 0.24480625987052917,
+    "hierarchical_silhouette": 0.22438308596611023
+  },
+  "gap_validation": {
+    "avg_improvement_top_recommended": 0.2507,
+    "avg_improvement_random": 0.0275,
+    "n_candidates": 2700
+  }
+}
