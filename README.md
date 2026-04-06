@@ -225,18 +225,6 @@ The system was trained and evaluated on the [Kaggle Resume Dataset](https://www.
 
 ---
 
-## Team
-
-**Group 36 — CSE-572 Data Mining, Spring 2026**
-Arizona State University
-
-- Bharanidharan Maheswaran
-- Vineeth
-- Karthikeyan
-- Deepti
-
----
-
 ## License
 
 This project is for academic purposes as part of the CSE-572 course at Arizona State University.
