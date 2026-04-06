@@ -158,15 +158,18 @@ skillmatch-ai/
 
 ### Prerequisites
 
-```bash
-python 3.12+
-pip install fastapi uvicorn pdfplumber pytesseract Pillow pandas \
-            scikit-learn scipy mlxtend spacy python-multipart
-python -m spacy download en_core_web_sm
+**Python 3.12+** is required.
 
-# Tesseract OCR (for image resume support)
+```bash
+# Install Tesseract OCR (for image resume support)
 sudo apt-get install tesseract-ocr      # Ubuntu/Debian
 brew install tesseract                  # macOS
+
+# Install all Python dependencies
+pip install -r requirements.txt
+
+# Download the spaCy English model
+python -m spacy download en_core_web_sm
 ```
 
 ### Start the Backend

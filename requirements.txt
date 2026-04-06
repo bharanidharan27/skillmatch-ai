@@ -1,0 +1,14 @@
+fastapi==0.135.2
+uvicorn==0.42.0
+starlette==1.0.0
+pydantic==2.12.4
+python-multipart==0.0.22
+pdfplumber==0.11.9
+pytesseract==0.3.13
+Pillow==12.1.1
+pandas==3.0.1
+numpy==2.4.3
+scikit-learn==1.8.0
+scipy==1.17.1
+mlxtend==0.24.0
+spacy==3.8.14
