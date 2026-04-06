@@ -180,10 +180,18 @@ python api.py
 # Server starts on http://localhost:5000
 ```
 
-The FastAPI server:
+### Access the Frontend
+
+The FastAPI server serves the pre-built frontend automatically — no separate frontend server needed.
+
+1. Make sure the backend is running (`python api.py`)
+2. Open your browser and go to **http://localhost:5000**
+3. The full SkillMatch AI interface will load
+
+The static frontend files are in `career-app-static/`. The FastAPI server:
 - Serves the REST API at `/api/*`
 - Serves the static frontend at `/`
-- Strips the `/port/5000` prefix automatically for hosted environments
+- Strips the `/port/5000` prefix automatically for hosted/proxied environments
 
 ### API Endpoints
 
