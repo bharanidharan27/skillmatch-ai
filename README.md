@@ -61,7 +61,7 @@ The pipeline is evaluated against a TF-IDF baseline across Precision@K metrics. 
 
 | Feature | Description |
 |---|---|
-| **Resume Analyzer** | Upload a PDF, image (JPG/PNG/BMP/TIFF/WebP), or paste text. Extracts skills, education level, years of experience, and job titles using NLP. |
+| **Resume Analyzer** | Upload a PDF, DOCX, image (JPG/PNG/BMP/TIFF/WebP), or paste text. Extracts skills, education level, years of experience, and job titles using NLP. |
 | **Role Matching** | Matches extracted skills against 25 job descriptions (18 senior roles + 7 intern roles) using IDF-weighted cosine similarity. |
 | **Skill Gap Analysis** | Shows missing required and preferred skills for a target role, ranked by priority. Required skills are always ranked first with a 3× weight boost. |
 | **Clusters** | K-Means clustering (k=9) of 9,000 resumes from the Kaggle dataset. Cluster labels are derived from top skills, not dataset category names. |

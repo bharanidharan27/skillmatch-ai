@@ -98,13 +98,15 @@ export default function Analyze() {
 
   const ACCEPTED_TYPES = new Set([
     "application/pdf",
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "application/msword",
     "image/jpeg",
     "image/png",
     "image/bmp",
     "image/tiff",
     "image/webp",
   ]);
-  const ACCEPTED_EXTS = /\.(pdf|jpe?g|png|bmp|tiff?|webp)$/i;
+  const ACCEPTED_EXTS = /\.(pdf|docx|jpe?g|png|bmp|tiff?|webp)$/i;
 
   const handleFileSelect = useCallback((file: File) => {
     if (ACCEPTED_TYPES.has(file.type) || ACCEPTED_EXTS.test(file.name)) {
@@ -184,7 +186,7 @@ export default function Analyze() {
           <input
             ref={fileInputRef}
             type="file"
-            accept=".pdf,.jpg,.jpeg,.png,.bmp,.tiff,.tif,.webp"
+            accept=".pdf,.docx,.jpg,.jpeg,.png,.bmp,.tiff,.tif,.webp"
             className="hidden"
             onChange={(e) => {
               const file = e.target.files?.[0];
@@ -233,11 +235,11 @@ export default function Analyze() {
                   <FileImage className="w-5 h-5 text-muted-foreground" />
                 </div>
                 <p className="text-xs text-muted-foreground">
-                  Drop a PDF or image here, or{" "}
+                  Drop a PDF, DOCX, or image here, or{" "}
                   <span className="text-primary font-medium">browse</span>
                 </p>
                 <p className="text-[10px] text-muted-foreground/60">
-                  PDF, JPG, PNG, BMP, TIFF, WebP
+                  PDF, DOCX, JPG, PNG, BMP, TIFF, WebP
                 </p>
               </div>
             </div>
@@ -275,8 +277,8 @@ export default function Analyze() {
                 <FileSearch className="w-3.5 h-3.5 mr-1.5" />
               )}
               {pdfFile
-                ? pdfFile.name.toLowerCase().endsWith(".pdf")
-                  ? "Analyze PDF"
+                ? (pdfFile.name.toLowerCase().endsWith(".pdf") || pdfFile.name.toLowerCase().endsWith(".docx"))
+                  ? pdfFile.name.toLowerCase().endsWith(".docx") ? "Analyze DOCX" : "Analyze PDF"
                   : "Analyze Image"
                 : "Analyze Resume"}
             </Button>

@@ -171,11 +171,27 @@ _IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".bmp", ".tiff", ".tif", ".webp"}
 
 
 def _extract_text_from_file(filename: str, contents: bytes) -> str:
-    """Extract text from a PDF or image file."""
+    """Extract text from a PDF, DOCX, or image file."""
     import io
     ext = "." + filename.rsplit(".", 1)[-1].lower() if "." in filename else ""
 
-    if ext == ".pdf":
+    if ext == ".docx":
+        try:
+            import docx
+            doc = docx.Document(io.BytesIO(contents))
+            paragraphs = [p.text for p in doc.paragraphs if p.text.strip()]
+            # Also extract text from tables (skills tables are common in resumes)
+            for table in doc.tables:
+                for row in table.rows:
+                    for cell in row.cells:
+                        cell_text = cell.text.strip()
+                        if cell_text:
+                            paragraphs.append(cell_text)
+            return "\n".join(paragraphs).strip()
+        except Exception as e:
+            raise HTTPException(status_code=400, detail=f"Could not read DOCX: {e}")
+
+    elif ext == ".pdf":
         import pdfplumber
         try:
             with pdfplumber.open(io.BytesIO(contents)) as pdf:
@@ -200,7 +216,7 @@ def _extract_text_from_file(filename: str, contents: bytes) -> str:
     else:
         raise HTTPException(
             status_code=400,
-            detail=f"Unsupported file type '{ext}'. Upload a PDF or image (JPG, PNG).",
+            detail=f"Unsupported file type '{ext}'. Upload a PDF, DOCX, or image (JPG, PNG, BMP, TIFF, WebP).",
         )
 
 
