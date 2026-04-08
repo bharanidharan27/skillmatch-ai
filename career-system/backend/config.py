@@ -89,6 +89,14 @@ class HyperParams:
         "other": 0.4,
     })
 
+    # Recency weighting for experience section
+    # Skills from the most recent job get a 1.0× recency multiplier.
+    # Each year further back decays the multiplier by this amount,
+    # floored at recency_min_multiplier.
+    # e.g. decay=0.15 → job from 3 years ago → max(0.4, 1.0 - 3*0.15) = 0.55×
+    recency_decay_per_year: float = 0.15
+    recency_min_multiplier: float = 0.40
+
     # Role-matching parameters
     top_k_matches: int = 10        # return top-K matching roles
 

@@ -276,15 +276,33 @@ class ResumeParser:
     ) -> Dict[str, float]:
         """Extract skills from each section, applying section weights.
 
-        Score = sum over sections of (frequency_in_section * section_weight).
+        For non-experience sections:
+            score += frequency * section_weight
+
+        For the experience section, recency weighting is applied:
+            The section is split into individual job blocks using date-range
+            boundaries. Each block receives a recency_multiplier that decays
+            linearly with how many years ago the role ended (1.0 for current /
+            most-recent, down to recency_min_multiplier for older roles).
+
+            score += frequency * section_weight * recency_multiplier
         """
         skill_scores: Dict[str, float] = {}
+        exp_section_weight = self.section_weights.get("experience", 0.8)
 
         for sec_name, sec_text in sections.items():
-            weight = self.section_weights.get(sec_name, self.section_weights.get("other", 0.4))
-            hits = self.skill_lookup.extract_from_text(sec_text)
-            for skill, count in hits.items():
-                skill_scores[skill] = skill_scores.get(skill, 0.0) + count * weight
+            if sec_name in ("experience", "work"):
+                # Split into job blocks and score each with recency weighting
+                self._score_experience_section(
+                    sec_text, exp_section_weight, skill_scores
+                )
+            else:
+                weight = self.section_weights.get(
+                    sec_name, self.section_weights.get("other", 0.4)
+                )
+                hits = self.skill_lookup.extract_from_text(sec_text)
+                for skill, count in hits.items():
+                    skill_scores[skill] = skill_scores.get(skill, 0.0) + count * weight
 
         # If no sections were identified, fall back to raw text with default weight
         if not skill_scores:
@@ -293,6 +311,81 @@ class ResumeParser:
                 skill_scores[skill] = count * 0.6
 
         return skill_scores
+
+    def _score_experience_section(
+        self,
+        exp_text: str,
+        section_weight: float,
+        skill_scores: Dict[str, float],
+    ) -> None:
+        """Score skills in the experience section with per-job recency weighting.
+
+        Algorithm:
+          1. Find all date-range positions in the text (e.g. "Jun 2022 – Aug 2023").
+          2. Split the text into job blocks at each date-range boundary.
+          3. Compute the end-year of each block to derive its recency multiplier:
+               recency = max(min_mult, 1.0 - decay * years_ago)
+             where years_ago = current_year - job_end_year.
+             Blocks with no detectable date default to the global minimum.
+          4. Score skills in each block: freq * section_weight * recency.
+        """
+        import datetime
+        now = datetime.datetime.now()
+        decay = PARAMS.recency_decay_per_year
+        min_mult = PARAMS.recency_min_multiplier
+
+        # Find all date-range matches and their positions
+        date_matches = list(_DATE_RANGE_RE.finditer(exp_text))
+
+        if not date_matches:
+            # No dates found — score the whole section at min recency
+            hits = self.skill_lookup.extract_from_text(exp_text)
+            for skill, count in hits.items():
+                skill_scores[skill] = (
+                    skill_scores.get(skill, 0.0) + count * section_weight * min_mult
+                )
+            return
+
+        # Build job blocks: each block starts at a date-range match
+        # and ends just before the next one (or the end of the section).
+        blocks: List[Dict] = []
+        for i, m in enumerate(date_matches):
+            start = m.start()
+            end = date_matches[i + 1].start() if i + 1 < len(date_matches) else len(exp_text)
+            block_text = exp_text[start:end]
+
+            # Parse the end-year / end-month of this role
+            _, _, end_month_str, end_year_str = m.groups()
+            try:
+                if end_year_str.lower() in ("present", "current", "now"):
+                    end_year = now.year
+                else:
+                    end_year = int(end_year_str)
+            except (ValueError, AttributeError):
+                end_year = None
+
+            blocks.append({"text": block_text, "end_year": end_year})
+
+        # Sort blocks so the most recent is first (highest end_year / None = present)
+        blocks.sort(
+            key=lambda b: b["end_year"] if b["end_year"] is not None else now.year + 1,
+            reverse=True,
+        )
+
+        for block in blocks:
+            end_year = block["end_year"]
+            if end_year is None:
+                years_ago = 0  # treat as current
+            else:
+                years_ago = max(0, now.year - end_year)
+
+            recency = max(min_mult, 1.0 - decay * years_ago)
+
+            hits = self.skill_lookup.extract_from_text(block["text"])
+            for skill, count in hits.items():
+                skill_scores[skill] = (
+                    skill_scores.get(skill, 0.0) + count * section_weight * recency
+                )
 
     @staticmethod
     def _extract_years_experience(text: str, full_text: str = "") -> Optional[int]:
