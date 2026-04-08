@@ -54,6 +54,7 @@ class SkillNormalizer:
             "years_experience": parsed_resume.get("years_experience"),
             "education_level": parsed_resume.get("education_level", "Unknown"),
             "job_titles_mentioned": parsed_resume.get("job_titles_mentioned", []),
+            "projects": parsed_resume.get("projects", []),
             "normalized_skills": sorted(canonical_scores.keys()),
             "skill_scores": canonical_scores,
             "skill_categories": canonical_cats,

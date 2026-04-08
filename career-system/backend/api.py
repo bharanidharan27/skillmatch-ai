@@ -163,6 +163,7 @@ def parse_resume(req: ResumeTextRequest) -> Dict[str, Any]:
         "years_experience": normed.get("years_experience"),
         "education_level": normed.get("education_level", "Unknown"),
         "job_titles_mentioned": normed.get("job_titles_mentioned", []),
+        "projects": normed.get("projects", []),
         "sections_found": list(pre.get("sections", {}).keys()),
     }
 
@@ -251,6 +252,7 @@ async def parse_resume_file(file: UploadFile = File(...)) -> Dict[str, Any]:
         "years_experience": normed.get("years_experience"),
         "education_level": normed.get("education_level", "Unknown"),
         "job_titles_mentioned": normed.get("job_titles_mentioned", []),
+        "projects": normed.get("projects", []),
         "sections_found": list(parsed.get("sections", {}).keys()),
         "extracted_text": text,
     }

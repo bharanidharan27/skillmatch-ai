@@ -26,6 +26,8 @@ import {
   ArrowRight,
   Loader2,
   X,
+  FolderKanban,
+  Code2,
 } from "lucide-react";
 
 const CHART_COLORS = [
@@ -456,6 +458,51 @@ export default function Analyze() {
               </CardContent>
             </Card>
           </div>
+
+          {/* Projects section */}
+          {parsedResume.projects && parsedResume.projects.length > 0 && (
+            <Card className="border-border">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-sm font-semibold flex items-center gap-2">
+                  <FolderKanban className="w-4 h-4 text-chart-2" />
+                  Projects ({parsedResume.projects.length})
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="pb-5 space-y-3">
+                {parsedResume.projects.map((proj: { name: string; tech_stack: string[]; description: string }, idx: number) => (
+                  <div
+                    key={idx}
+                    className="rounded-lg border border-border bg-muted/30 p-3 space-y-1.5"
+                    data-testid={`project-card-${idx}`}
+                  >
+                    <p className="text-sm font-semibold leading-tight" data-testid={`project-name-${idx}`}>
+                      {proj.name}
+                    </p>
+                    {proj.description && (
+                      <p className="text-xs text-muted-foreground leading-relaxed" data-testid={`project-desc-${idx}`}>
+                        {proj.description}
+                      </p>
+                    )}
+                    {proj.tech_stack.length > 0 && (
+                      <div className="flex items-center gap-1.5 flex-wrap pt-0.5">
+                        <Code2 className="w-3 h-3 text-muted-foreground shrink-0" />
+                        {proj.tech_stack.map((tech) => (
+                          <Badge
+                            key={tech}
+                            variant="outline"
+                            className="text-[10px] font-medium bg-chart-2/10 text-chart-2 border-chart-2/20 py-0"
+                            data-testid={`project-tech-${idx}-${tech}`}
+                          >
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+          )}
 
           {/* CTA to next step */}
           <Card className="border-border bg-primary/5">

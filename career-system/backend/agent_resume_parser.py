@@ -254,6 +254,10 @@ class ResumeParser:
         # 4. Job titles
         job_titles = self._extract_job_titles(raw)
 
+        # 5. Projects — dedicated section first, fall back to raw scan
+        proj_text = sections.get("projects", "")
+        projects = self._extract_projects(proj_text, raw)
+
         return {
             "resume_id": preprocessed.get("resume_id", -1),
             "category": preprocessed.get("category", ""),
@@ -263,6 +267,7 @@ class ResumeParser:
             "years_experience": years_exp,
             "education_level": edu_level,
             "job_titles_mentioned": job_titles,
+            "projects": projects,
         }
 
     def parse_batch(self, preprocessed_list: List[Dict]) -> List[Dict]:
@@ -386,6 +391,126 @@ class ResumeParser:
                 skill_scores[skill] = (
                     skill_scores.get(skill, 0.0) + count * section_weight * recency
                 )
+
+    def _extract_projects(
+        self,
+        proj_text: str,
+        raw_text: str,
+    ) -> List[Dict]:
+        """Extract structured project entries from the Projects section.
+
+        Each returned dict has:
+          name        – project title (str)
+          tech_stack  – skills detected in this project block (list[str])
+          description – first 200 chars of the project description (str)
+
+        Algorithm:
+          1. Use the dedicated ``projects`` section text if available.
+          2. If that section is empty, fall back to scanning ``raw_text``
+             for lines that look like project headers (all-caps / title-case
+             short phrase followed by a dash/pipe and tech keywords).
+          3. Split the section into individual project blocks by detecting
+             project-header lines: short lines (≤10 words) that are bold-like,
+             all-caps, title-cased, or followed immediately by a tech list.
+          4. For each block: run skill lookup for tech_stack, grab the first
+             non-empty non-header line as description.
+        """
+        source = proj_text.strip()
+
+        # If there is no dedicated projects section, try to find a Projects
+        # block anywhere in raw_text (handles resumes where segmentation misses it)
+        if not source:
+            m = re.search(
+                r"(?im)^[\s]*(?:projects?|key\s+projects?|personal\s+projects?|academic\s+projects?)[\s]*$",
+                raw_text,
+            )
+            if m:
+                source = raw_text[m.end():].strip()
+                # Trim at next major section boundary if found
+                next_sec = re.search(
+                    r"(?im)^[\s]*(?:experience|education|skills|certifications?|summary|work)[\s]*$",
+                    source,
+                )
+                if next_sec:
+                    source = source[: next_sec.start()].strip()
+
+        if not source:
+            return []
+
+        # ── Split into project blocks ──────────────────────────────────────
+        # A project header is a short standalone line that names the project.
+        # Criteria (all must hold):
+        #   - 1–7 words long
+        #   - Does NOT end with sentence-ending punctuation (.!?)
+        #   - Does NOT contain common sentence starters ("Built", "Developed", etc.)
+        #   - Starts with a capital letter
+        #   - Is NOT purely a date / number
+        _SENTENCE_STARTERS = re.compile(
+            r"^(?:Built|Developed|Created|Designed|Implemented|Led|Managed|"
+            r"Worked|Used|Utilized|Helped|Assisted|Contributed|Analyzed|"
+            r"Deployed|Maintained|Automated|Integrated|Supported|Wrote|"
+            r"Performed|Collaborated|Delivered|Established|Improved|Migrated)\b",
+            re.IGNORECASE,
+        )
+        _PROJ_HEADER_RE = re.compile(
+            r"(?m)^[ \t]*"
+            r"([A-Z][A-Za-z0-9 \-:–|/&()]{2,60})"
+            r"[ \t]*$"
+        )
+
+        # Collect (position, header_text) pairs
+        headers: List[tuple] = []
+        for m in _PROJ_HEADER_RE.finditer(source):
+            header = m.group(1).strip()
+            word_count = len(header.split())
+            # Must be short (1–7 words)
+            if word_count > 7:
+                continue
+            # Skip sentence starters — those are description lines, not titles
+            if _SENTENCE_STARTERS.match(header):
+                continue
+            # Skip lines that end with sentence-ending punctuation
+            if header.rstrip().endswith(('.', '!', '?')):
+                continue
+            # Skip purely numeric / date lines
+            if re.match(r'^[\d\s\-–/]+$', header):
+                continue
+            headers.append((m.start(), header))
+
+        projects: List[Dict] = []
+
+        if not headers:
+            # No detectable sub-headers: treat the whole section as one project
+            tech = sorted(self.skill_lookup.extract_from_text(source).keys())
+            # Grab up to 200 chars as description
+            desc = re.sub(r'\s+', ' ', source).strip()[:200]
+            if tech or desc:
+                projects.append({"name": "Project", "tech_stack": tech, "description": desc})
+            return projects
+
+        for i, (pos, name) in enumerate(headers):
+            end = headers[i + 1][0] if i + 1 < len(headers) else len(source)
+            block = source[pos:end]
+
+            # Remove the header line itself to get the body
+            body_lines = block.split("\n")[1:]
+            body = " ".join(ln.strip() for ln in body_lines if ln.strip())
+
+            tech = sorted(self.skill_lookup.extract_from_text(block).keys())
+
+            # Description: first 200 chars of body, stripped of bullet chars
+            desc = re.sub(r'^[-•●▪◦*]+\s*', '', body, flags=re.MULTILINE)
+            desc = re.sub(r'\s+', ' ', desc).strip()[:200]
+
+            # Only add if we have either a tech stack or a description
+            if tech or desc:
+                projects.append({
+                    "name": name,
+                    "tech_stack": tech,
+                    "description": desc,
+                })
+
+        return projects
 
     @staticmethod
     def _extract_years_experience(text: str, full_text: str = "") -> Optional[int]:
