@@ -222,26 +222,24 @@ def _extract_text_from_file(filename: str, contents: bytes) -> str:
 
 @app.post("/api/parse-resume-pdf")
 async def parse_resume_file(file: UploadFile = File(...)) -> Dict[str, Any]:
-    """Upload a PDF or image file → extract text → parsed + normalised skills."""
+    """Upload a PDF, DOCX, or image file → Agent 1 extracts text → parsed + normalised skills."""
     if not file.filename:
         raise HTTPException(status_code=400, detail="No filename provided.")
 
     contents = await file.read()
-    text = _extract_text_from_file(file.filename, contents)
 
-    if not text:
-        raise HTTPException(
-            status_code=400,
-            detail="No text could be extracted from the file.",
-        )
-
-    from preprocessing import preprocess_single
     from agent_resume_parser import ResumeParser
     from agent_skill_normalizer import SkillNormalizer
 
-    pre = preprocess_single(text)
     parser = ResumeParser(_state["skill_lookup"])
-    parsed = parser.parse(pre)
+
+    try:
+        # Agent 1 now owns file ingestion: PDF, DOCX, and image all handled internally
+        parsed = parser.parse_file(contents, filename=file.filename)
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc))
+
+    text = parsed.pop("extracted_text", "")
 
     normalizer = SkillNormalizer(_state["skill_lookup"])
     normed = normalizer.normalize(parsed)

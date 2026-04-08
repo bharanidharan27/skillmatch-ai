@@ -11,17 +11,28 @@ information from preprocessed resumes:
 
 Skills are scored by frequency, recency (later sections weighted higher),
 and section-based weights.
+
+File ingestion (parse_file / extract_text_from_bytes):
+  - PDF  : pdfplumber
+  - DOCX : python-docx  (paragraphs + table cells)
+  - Image: pytesseract + Pillow (OCR)
+  - Text : plain UTF-8 string
 """
 
 from __future__ import annotations
 
+import io
 import re
-from typing import Dict, List, Optional, Tuple
+from pathlib import Path
+from typing import Dict, List, Optional, Union
 
 import spacy
 
 from config import PARAMS
 from skill_dictionary import SkillLookup, load_dictionary
+
+# Supported file extensions
+_IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".bmp", ".tiff", ".tif", ".webp"}
 
 # ── Lazy spaCy loading ──────────────────────────────────────────────────────
 
@@ -95,13 +106,126 @@ _JOB_TITLE_RE = re.compile(
 
 
 class ResumeParser:
-    """Agent 1: Parses structured information from a preprocessed resume."""
+    """Agent 1: Parses structured information from a preprocessed resume.
+
+    Supports three entry points:
+      parse(preprocessed)          – from a dict produced by preprocessing.py
+      parse_file(path_or_bytes, filename)  – from a raw file (PDF/DOCX/image)
+      extract_text_from_bytes(contents, filename) – text extraction only
+    """
 
     def __init__(self, skill_lookup: Optional[SkillLookup] = None) -> None:
         self.skill_lookup = skill_lookup or SkillLookup()
         self.section_weights = PARAMS.section_weights
 
     # ── Public ───────────────────────────────────────────────────────────
+
+    # -- File ingestion entry point ---------------------------------------
+
+    @staticmethod
+    def extract_text_from_bytes(contents: bytes, filename: str) -> str:
+        """Extract plain text from PDF, DOCX, or image bytes.
+
+        Args:
+            contents: Raw file bytes.
+            filename: Original filename, used to determine file type.
+
+        Returns:
+            Extracted text as a UTF-8 string.
+
+        Raises:
+            ValueError: If the file type is not supported.
+        """
+        ext = Path(filename).suffix.lower()
+
+        if ext == ".docx":
+            try:
+                import docx  # python-docx
+                doc = docx.Document(io.BytesIO(contents))
+                # Extract paragraphs (headings, body text, bullet points)
+                lines = [p.text for p in doc.paragraphs if p.text.strip()]
+                # Also extract table cells — many resume templates use tables
+                # for skills grids, contact info, etc.
+                for table in doc.tables:
+                    for row in table.rows:
+                        for cell in row.cells:
+                            cell_text = cell.text.strip()
+                            if cell_text and cell_text not in lines:
+                                lines.append(cell_text)
+                return "\n".join(lines).strip()
+            except Exception as exc:
+                raise ValueError(f"Could not read DOCX '{filename}': {exc}") from exc
+
+        elif ext == ".pdf":
+            try:
+                import pdfplumber
+                with pdfplumber.open(io.BytesIO(contents)) as pdf:
+                    pages = [page.extract_text() or "" for page in pdf.pages]
+                return "\n".join(pages).strip()
+            except Exception as exc:
+                raise ValueError(f"Could not read PDF '{filename}': {exc}") from exc
+
+        elif ext in _IMAGE_EXTS:
+            try:
+                import pytesseract
+                from PIL import Image
+                img = Image.open(io.BytesIO(contents))
+                if img.mode not in ("L", "RGB"):
+                    img = img.convert("RGB")
+                return pytesseract.image_to_string(img).strip()
+            except Exception as exc:
+                raise ValueError(f"Could not OCR image '{filename}': {exc}") from exc
+
+        else:
+            raise ValueError(
+                f"Unsupported file type '{ext}'. "
+                "Supported formats: PDF, DOCX, JPG, PNG, BMP, TIFF, WebP."
+            )
+
+    def parse_file(
+        self,
+        source: Union[bytes, str, Path],
+        filename: Optional[str] = None,
+    ) -> Dict:
+        """Parse a resume directly from a file path or raw bytes.
+
+        This is the primary entry point for the agent when ingesting uploaded
+        files. It runs the full 3-step pipeline internally:
+          1. Extract text from PDF / DOCX / image
+          2. Preprocess (section segmentation, cleaning)
+          3. Parse (skills, experience, education, job titles)
+
+        Args:
+            source  : Raw bytes or a file path (str / Path).
+            filename: Original filename — required when ``source`` is bytes,
+                      used to determine the file type extension.
+
+        Returns:
+            Same dict structure as ``parse()``, plus ``extracted_text``.
+        """
+        from preprocessing import preprocess_single
+
+        # Resolve bytes vs. path
+        if isinstance(source, (str, Path)):
+            path = Path(source)
+            contents = path.read_bytes()
+            filename = filename or path.name
+        else:
+            contents = source
+            if not filename:
+                raise ValueError("'filename' is required when source is bytes.")
+
+        text = self.extract_text_from_bytes(contents, filename)
+
+        if not text:
+            raise ValueError("No text could be extracted from the file.")
+
+        pre = preprocess_single(text)
+        result = self.parse(pre)
+        result["extracted_text"] = text
+        return result
+
+    # -- Standard dict entry point (used by pipeline.py) -----------------
 
     def parse(self, preprocessed: Dict) -> Dict:
         """Parse a single preprocessed resume dict.
@@ -238,14 +362,23 @@ class ResumeParser:
 
 # ── CLI helper ──────────────────────────────────────────────────────────────
 if __name__ == "__main__":
+    import sys
     from preprocessing import load_dataset, preprocess_single
     from config import COLUMN_TEXT, COLUMN_CATEGORY, COLUMN_JOB_TITLE
 
-    df = load_dataset()
-    row = df.iloc[0]
-    pre = preprocess_single(row[COLUMN_TEXT], row[COLUMN_CATEGORY], row[COLUMN_JOB_TITLE], 0)
     parser = ResumeParser()
-    result = parser.parse(pre)
+
+    # If a file path is passed as argument, test parse_file()
+    if len(sys.argv) > 1:
+        file_path = Path(sys.argv[1])
+        print(f"Parsing file: {file_path}")
+        result = parser.parse_file(file_path)
+    else:
+        df = load_dataset()
+        row = df.iloc[0]
+        pre = preprocess_single(row[COLUMN_TEXT], row[COLUMN_CATEGORY], row[COLUMN_JOB_TITLE], 0)
+        result = parser.parse(pre)
+
     print(f"Skills ({len(result['skills'])}): {result['skills'][:15]}")
     print(f"Years exp: {result['years_experience']}")
     print(f"Education: {result['education_level']}")
