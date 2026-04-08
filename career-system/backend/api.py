@@ -303,20 +303,42 @@ def skill_gap(req: SkillGapRequest) -> Dict[str, Any]:
         "skill_scores": {s: 1.0 for s in req.skills},
     }
 
-    # Use cluster 0 as default if no clustering data
     cluster_freq: Dict[str, float] = {}
     lift_idx: Dict[str, float] = {}
+    cluster_id = 0
 
     if _state.get("clustering") and _state.get("rules"):
-        # Pick cluster 0 as a reasonable default for ad-hoc queries
-        cluster_id = 0
+        profiles = _state["clustering"].get("cluster_profiles", {})
+
+        # ── Pick the best-matching cluster for this candidate ─────────────
+        # Score each cluster by overlap between candidate skills and the
+        # cluster's top-20 skills, weighted by their normalized frequency.
+        cand_skill_set = set(req.skills)
+        best_score = -1.0
+        for cid_str, prof in profiles.items():
+            top = prof.get("top_skills", [])
+            top_set = {s for s, _ in top}
+            overlap = len(cand_skill_set & top_set)
+            if overlap > best_score:
+                best_score = float(overlap)
+                cluster_id = int(cid_str)
+
+        # ── Build cluster_freq from top_skills (normalize by max score) ───
+        prof = profiles.get(str(cluster_id), {})
+        top_skills = prof.get("top_skills", [])
+        if top_skills:
+            max_score = max(score for _, score in top_skills) or 1.0
+            cluster_freq = {
+                skill: round(min(score / max_score, 1.0), 4)
+                for skill, score in top_skills
+            }
+
+        # ── Build lift_idx from association rules for this cluster ────────
         rules_data = _state["rules"].get(str(cluster_id), {})
-        from collections import defaultdict
         for rule in rules_data.get("rules", []):
+            rule_lift = rule.get("lift", 1.0)
             for s in rule.get("antecedents", []) + rule.get("consequents", []):
-                lift_idx[s] = max(lift_idx.get(s, 0.0), rule.get("lift", 1.0))
-    else:
-        cluster_id = 0
+                lift_idx[s] = max(lift_idx.get(s, 1.0), rule_lift)
 
     gap = compute_gap(candidate, jd, cluster_id, cluster_freq, lift_idx)
     return gap
