@@ -11,7 +11,18 @@
         "java17",
         "jdk",
         "j2se",
-        "core java"
+        "core java",
+        "java se",
+        "jvm java"
+      ],
+      "implies": [
+        "programming",
+        "object-oriented programming"
+      ],
+      "similar_skills": [
+        "kotlin",
+        "tcl",
+        "scala"
       ]
     },
     "Python": {
@@ -23,6 +34,16 @@
         "python2",
         "python 2",
         "py"
+      ],
+      "implies": [
+        "programming",
+        "scripting",
+        "object-oriented programming"
+      ],
+      "similar_skills": [
+        "ruby",
+        "perl",
+        "php"
       ]
     },
     "JavaScript": {
@@ -36,6 +57,16 @@
         "es2015",
         "es2016",
         "es2017"
+      ],
+      "implies": [
+        "programming",
+        "web development",
+        "frontend development"
+      ],
+      "similar_skills": [
+        "typescript",
+        "php",
+        "bash"
       ]
     },
     "TypeScript": {
@@ -43,6 +74,16 @@
       "aliases": [
         "typescript",
         "ts"
+      ],
+      "implies": [
+        "javascript",
+        "programming",
+        "web development"
+      ],
+      "similar_skills": [
+        "bash",
+        "javascript",
+        "powershell"
       ]
     },
     "C": {
@@ -50,6 +91,14 @@
       "aliases": [
         "c language",
         "c programming"
+      ],
+      "implies": [
+        "programming"
+      ],
+      "similar_skills": [
+        "c++",
+        "abap",
+        "go"
       ]
     },
     "C++": {
@@ -58,6 +107,15 @@
         "c++",
         "cpp",
         "c plus plus"
+      ],
+      "implies": [
+        "programming",
+        "object-oriented programming"
+      ],
+      "similar_skills": [
+        "go",
+        "c",
+        "rust"
       ]
     },
     "C#": {
@@ -65,7 +123,17 @@
       "aliases": [
         "c#",
         "csharp",
-        "c sharp"
+        "c sharp",
+        "dotnet c#"
+      ],
+      "implies": [
+        "programming",
+        "object-oriented programming"
+      ],
+      "similar_skills": [
+        "f#",
+        "groovy",
+        "visual basic .net"
       ]
     },
     "Go": {
@@ -73,19 +141,49 @@
       "aliases": [
         "go",
         "golang"
+      ],
+      "implies": [
+        "programming",
+        "concurrency"
+      ],
+      "similar_skills": [
+        "rust",
+        "c++",
+        "zig"
       ]
     },
     "Rust": {
       "category": "Programming Language",
       "aliases": [
         "rust",
-        "rust-lang"
+        "rust-lang",
+        "rust language"
+      ],
+      "implies": [
+        "programming",
+        "concurrency"
+      ],
+      "similar_skills": [
+        "zig",
+        "go",
+        "nim"
       ]
     },
     "Ruby": {
       "category": "Programming Language",
       "aliases": [
-        "ruby"
+        "ruby",
+        "rb"
+      ],
+      "implies": [
+        "programming",
+        "object-oriented programming",
+        "scripting"
+      ],
+      "similar_skills": [
+        "perl",
+        "python",
+        "php"
       ]
     },
     "PHP": {
@@ -94,24 +192,66 @@
         "php",
         "php7",
         "php8"
+      ],
+      "implies": [
+        "programming",
+        "web development",
+        "scripting"
+      ],
+      "similar_skills": [
+        "javascript",
+        "perl",
+        "typescript"
       ]
     },
     "Swift": {
       "category": "Programming Language",
       "aliases": [
-        "swift"
+        "swift",
+        "swift language"
+      ],
+      "implies": [
+        "programming",
+        "mobile development"
+      ],
+      "similar_skills": [
+        "objective-c",
+        "crystal",
+        "dart"
       ]
     },
     "Kotlin": {
       "category": "Programming Language",
       "aliases": [
-        "kotlin"
+        "kotlin",
+        "kotlin language"
+      ],
+      "implies": [
+        "java",
+        "programming",
+        "mobile development"
+      ],
+      "similar_skills": [
+        "scala",
+        "java",
+        "groovy"
       ]
     },
     "Scala": {
       "category": "Programming Language",
       "aliases": [
-        "scala"
+        "scala",
+        "scala language"
+      ],
+      "implies": [
+        "java",
+        "functional programming",
+        "programming"
+      ],
+      "similar_skills": [
+        "groovy",
+        "kotlin",
+        "c#"
       ]
     },
     "R": {
@@ -119,13 +259,34 @@
       "aliases": [
         "r language",
         "r programming",
-        "r-lang"
+        "r-lang",
+        "r stats"
+      ],
+      "implies": [
+        "statistics",
+        "data analysis",
+        "programming"
+      ],
+      "similar_skills": [
+        "julia",
+        "dart",
+        "matlab"
       ]
     },
     "Perl": {
       "category": "Programming Language",
       "aliases": [
-        "perl"
+        "perl",
+        "perl5"
+      ],
+      "implies": [
+        "programming",
+        "scripting"
+      ],
+      "similar_skills": [
+        "php",
+        "ruby",
+        "javascript"
       ]
     },
     "Shell Scripting": {
@@ -145,6 +306,15 @@
       "aliases": [
         "sql",
         "structured query language"
+      ],
+      "implies": [
+        "database design",
+        "relational databases"
+      ],
+      "similar_skills": [
+        "relational databases",
+        "database design",
+        "nosql"
       ]
     },
     "PL/SQL": {
@@ -152,7 +322,17 @@
       "aliases": [
         "pl/sql",
         "plsql",
-        "pl sql"
+        "pl sql",
+        "oracle pl/sql"
+      ],
+      "implies": [
+        "sql",
+        "oracle database"
+      ],
+      "similar_skills": [
+        "t-sql",
+        "stata",
+        "haskell"
       ]
     },
     "T-SQL": {
@@ -162,6 +342,15 @@
         "tsql",
         "transact-sql",
         "transact sql"
+      ],
+      "implies": [
+        "sql",
+        "microsoft sql server"
+      ],
+      "similar_skills": [
+        "haskell",
+        "pl/sql",
+        "clojure"
       ]
     },
     "Objective-C": {
@@ -171,36 +360,96 @@
         "objective c",
         "objc",
         "obj-c"
+      ],
+      "implies": [
+        "programming",
+        "mobile development"
+      ],
+      "similar_skills": [
+        "dart",
+        "swift",
+        "r"
       ]
     },
     "Groovy": {
       "category": "Programming Language",
       "aliases": [
-        "groovy"
+        "groovy",
+        "groovy language"
+      ],
+      "implies": [
+        "java",
+        "scripting",
+        "programming"
+      ],
+      "similar_skills": [
+        "c#",
+        "scala",
+        "f#"
       ]
     },
     "Dart": {
       "category": "Programming Language",
       "aliases": [
-        "dart"
+        "dart",
+        "dart language"
+      ],
+      "implies": [
+        "programming",
+        "mobile development"
+      ],
+      "similar_skills": [
+        "r",
+        "objective-c",
+        "julia"
       ]
     },
     "MATLAB": {
       "category": "Programming Language",
       "aliases": [
-        "matlab"
+        "matlab",
+        "matlab language"
+      ],
+      "implies": [
+        "programming",
+        "data analysis"
+      ],
+      "similar_skills": [
+        "sas",
+        "julia",
+        "stata"
       ]
     },
     "SAS": {
       "category": "Programming Language",
       "aliases": [
-        "sas"
+        "sas",
+        "sas language",
+        "base sas"
+      ],
+      "implies": [
+        "statistics",
+        "data analysis"
+      ],
+      "similar_skills": [
+        "stata",
+        "matlab",
+        "pl/sql"
       ]
     },
     "COBOL": {
       "category": "Programming Language",
       "aliases": [
-        "cobol"
+        "cobol",
+        "cobol language"
+      ],
+      "implies": [
+        "programming"
+      ],
+      "similar_skills": [
+        "ada",
+        "fortran",
+        "assembly"
       ]
     },
     "Visual Basic": {
@@ -217,38 +466,99 @@
       "category": "Programming Language",
       "aliases": [
         "assembly",
-        "asm"
+        "asm",
+        "assembly language"
+      ],
+      "implies": [
+        "programming"
+      ],
+      "similar_skills": [
+        "solidity",
+        "ada",
+        "gdscript"
       ]
     },
     "Lua": {
       "category": "Programming Language",
       "aliases": [
-        "lua"
+        "lua",
+        "lua language"
+      ],
+      "implies": [
+        "programming",
+        "scripting"
+      ],
+      "similar_skills": [
+        "awk",
+        "powershell",
+        "tcl"
       ]
     },
     "Haskell": {
       "category": "Programming Language",
       "aliases": [
-        "haskell"
+        "haskell",
+        "haskell language"
+      ],
+      "implies": [
+        "functional programming",
+        "programming"
+      ],
+      "similar_skills": [
+        "clojure",
+        "t-sql",
+        "elixir"
       ]
     },
     "Clojure": {
       "category": "Programming Language",
       "aliases": [
-        "clojure"
+        "clojure",
+        "clojure language"
+      ],
+      "implies": [
+        "functional programming",
+        "programming"
+      ],
+      "similar_skills": [
+        "elixir",
+        "haskell",
+        "erlang"
       ]
     },
     "Erlang": {
       "category": "Programming Language",
       "aliases": [
-        "erlang"
+        "erlang",
+        "erlang otp"
+      ],
+      "implies": [
+        "functional programming",
+        "concurrency",
+        "programming"
+      ],
+      "similar_skills": [
+        "ocaml",
+        "elixir",
+        "scheme"
       ]
     },
     "PowerShell": {
       "category": "Programming Language",
       "aliases": [
         "powershell",
-        "ps1"
+        "ps1",
+        "pwsh",
+        "windows powershell"
+      ],
+      "implies": [
+        "scripting",
+        "windows administration"
+      ],
+      "similar_skills": [
+        "lua",
+        "bash",
+        "awk"
       ]
     },
     "React": {
@@ -258,6 +568,16 @@
         "react.js",
         "reactjs",
         "react js"
+      ],
+      "implies": [
+        "javascript",
+        "frontend development",
+        "web development"
+      ],
+      "similar_skills": [
+        "next.js",
+        "vue.js",
+        "angular"
       ]
     },
     "Angular": {
@@ -268,7 +588,19 @@
         "angularjs",
         "angular js",
         "angular 2",
-        "angular2"
+        "angular2",
+        "angular 2+",
+        "angular framework"
+      ],
+      "implies": [
+        "typescript",
+        "javascript",
+        "frontend development"
+      ],
+      "similar_skills": [
+        "angularjs",
+        "nuxt.js",
+        "svelte"
       ]
     },
     "Vue.js": {
@@ -278,6 +610,16 @@
         "vue.js",
         "vuejs",
         "vue js"
+      ],
+      "implies": [
+        "javascript",
+        "frontend development",
+        "web development"
+      ],
+      "similar_skills": [
+        "nuxt.js",
+        "gatsby",
+        "angular"
       ]
     },
     "Node.js": {
@@ -287,6 +629,15 @@
         "nodejs",
         "node js",
         "node"
+      ],
+      "implies": [
+        "javascript",
+        "backend development"
+      ],
+      "similar_skills": [
+        "deno",
+        "bun",
+        "express.js"
       ]
     },
     "Express.js": {
@@ -295,18 +646,51 @@
         "express",
         "express.js",
         "expressjs"
+      ],
+      "implies": [
+        "node.js",
+        "javascript",
+        "backend development",
+        "api development"
+      ],
+      "similar_skills": [
+        "nestjs",
+        "bun",
+        "koa"
       ]
     },
     "Django": {
       "category": "Framework",
       "aliases": [
-        "django"
+        "django",
+        "django framework"
+      ],
+      "implies": [
+        "python",
+        "web development",
+        "backend development"
+      ],
+      "similar_skills": [
+        "flask",
+        "fastapi",
+        "pyramid"
       ]
     },
     "Flask": {
       "category": "Framework",
       "aliases": [
-        "flask"
+        "flask",
+        "flask framework"
+      ],
+      "implies": [
+        "python",
+        "web development",
+        "backend development"
+      ],
+      "similar_skills": [
+        "fastapi",
+        "django",
+        "pyramid"
       ]
     },
     "FastAPI": {
@@ -314,6 +698,16 @@
       "aliases": [
         "fastapi",
         "fast api"
+      ],
+      "implies": [
+        "python",
+        "api development",
+        "backend development"
+      ],
+      "similar_skills": [
+        "pyramid",
+        "flask",
+        "tornado"
       ]
     },
     "Spring": {
@@ -327,12 +721,32 @@
         "spring security",
         "spring cloud",
         "spring batch"
+      ],
+      "implies": [
+        "java",
+        "backend development"
+      ],
+      "similar_skills": [
+        "spring boot",
+        "spring mvc",
+        "spring data"
       ]
     },
     "Hibernate": {
       "category": "Framework",
       "aliases": [
-        "hibernate"
+        "hibernate",
+        "hibernate orm"
+      ],
+      "implies": [
+        "java",
+        "sql",
+        "database design"
+      ],
+      "similar_skills": [
+        "mybatis",
+        "spring security",
+        "jakarta ee"
       ]
     },
     "Struts": {
@@ -340,7 +754,17 @@
       "aliases": [
         "struts",
         "struts2",
-        "struts 2"
+        "struts 2",
+        "apache struts"
+      ],
+      "implies": [
+        "java",
+        "web development"
+      ],
+      "similar_skills": [
+        "dropwizard",
+        "javaserver faces",
+        "micronaut"
       ]
     },
     "Ruby on Rails": {
@@ -349,6 +773,16 @@
         "ruby on rails",
         "rails",
         "ror"
+      ],
+      "implies": [
+        "ruby",
+        "web development",
+        "backend development"
+      ],
+      "similar_skills": [
+        "sinatra",
+        "hanami",
+        "grape"
       ]
     },
     "ASP.NET": {
@@ -357,7 +791,18 @@
         "asp.net",
         "aspnet",
         "asp.net mvc",
-        "asp.net core"
+        "asp.net core",
+        "asp net"
+      ],
+      "implies": [
+        "c#",
+        "web development",
+        "backend development"
+      ],
+      "similar_skills": [
+        "asp.net core",
+        "entity framework",
+        "dapper"
       ]
     },
     ".NET": {
@@ -373,13 +818,35 @@
       "category": "Framework",
       "aliases": [
         "jquery",
-        "j query"
+        "j query",
+        "jquery library"
+      ],
+      "implies": [
+        "javascript",
+        "frontend development"
+      ],
+      "similar_skills": [
+        "alpine.js",
+        "backbone.js",
+        "astro"
       ]
     },
     "Bootstrap": {
       "category": "Framework",
       "aliases": [
-        "bootstrap"
+        "bootstrap",
+        "twitter bootstrap"
+      ],
+      "implies": [
+        "html",
+        "css",
+        "javascript",
+        "frontend development"
+      ],
+      "similar_skills": [
+        "tailwind css",
+        "rxjs",
+        "material ui"
       ]
     },
     "Tailwind CSS": {
@@ -388,6 +855,15 @@
         "tailwind",
         "tailwindcss",
         "tailwind css"
+      ],
+      "implies": [
+        "css",
+        "frontend development"
+      ],
+      "similar_skills": [
+        "material ui",
+        "bootstrap",
+        "ant design"
       ]
     },
     "Next.js": {
@@ -395,7 +871,18 @@
       "aliases": [
         "next.js",
         "nextjs",
-        "next js"
+        "next js",
+        "next"
+      ],
+      "implies": [
+        "react",
+        "javascript",
+        "frontend development"
+      ],
+      "similar_skills": [
+        "remix",
+        "react",
+        "gatsby"
       ]
     },
     "Nuxt.js": {
@@ -404,13 +891,33 @@
         "nuxt",
         "nuxt.js",
         "nuxtjs"
+      ],
+      "implies": [
+        "vue.js",
+        "javascript",
+        "frontend development"
+      ],
+      "similar_skills": [
+        "angular",
+        "vue.js",
+        "angularjs"
       ]
     },
     "Svelte": {
       "category": "Framework",
       "aliases": [
         "svelte",
-        "sveltekit"
+        "sveltekit",
+        "svelte framework"
+      ],
+      "implies": [
+        "javascript",
+        "frontend development"
+      ],
+      "similar_skills": [
+        "sveltekit",
+        "angularjs",
+        "solidjs"
       ]
     },
     "Ember.js": {
@@ -419,6 +926,15 @@
         "ember",
         "ember.js",
         "emberjs"
+      ],
+      "implies": [
+        "javascript",
+        "frontend development"
+      ],
+      "similar_skills": [
+        "backbone.js",
+        "preact",
+        "jquery"
       ]
     },
     "Backbone.js": {
@@ -427,18 +943,49 @@
         "backbone",
         "backbone.js",
         "backbonejs"
+      ],
+      "implies": [
+        "javascript",
+        "frontend development"
+      ],
+      "similar_skills": [
+        "jquery",
+        "ember.js",
+        "alpine.js"
       ]
     },
     "Laravel": {
       "category": "Framework",
       "aliases": [
-        "laravel"
+        "laravel",
+        "laravel framework"
+      ],
+      "implies": [
+        "php",
+        "web development",
+        "backend development"
+      ],
+      "similar_skills": [
+        "symfony",
+        "codeigniter",
+        "cakephp"
       ]
     },
     "Symfony": {
       "category": "Framework",
       "aliases": [
-        "symfony"
+        "symfony",
+        "symfony framework"
+      ],
+      "implies": [
+        "php",
+        "web development",
+        "backend development"
+      ],
+      "similar_skills": [
+        "codeigniter",
+        "laravel",
+        "cakephp"
       ]
     },
     "JSP": {
@@ -508,6 +1055,15 @@
       "aliases": [
         "mysql",
         "my sql"
+      ],
+      "implies": [
+        "sql",
+        "relational databases"
+      ],
+      "similar_skills": [
+        "mariadb",
+        "postgresql",
+        "sqlite"
       ]
     },
     "PostgreSQL": {
@@ -516,6 +1072,15 @@
         "postgresql",
         "postgres",
         "psql"
+      ],
+      "implies": [
+        "sql",
+        "relational databases"
+      ],
+      "similar_skills": [
+        "mysql",
+        "mariadb",
+        "sqlite"
       ]
     },
     "SQL Server": {
@@ -534,13 +1099,32 @@
       "category": "Database",
       "aliases": [
         "mongodb",
-        "mongo"
+        "mongo",
+        "mongo db"
+      ],
+      "implies": [
+        "nosql"
+      ],
+      "similar_skills": [
+        "redis",
+        "memcached",
+        "amazon dynamodb"
       ]
     },
     "Redis": {
       "category": "Database",
       "aliases": [
-        "redis"
+        "redis",
+        "redis cache"
+      ],
+      "implies": [
+        "nosql",
+        "message queuing"
+      ],
+      "similar_skills": [
+        "memcached",
+        "mongodb",
+        "amazon dynamodb"
       ]
     },
     "Cassandra": {
@@ -562,6 +1146,15 @@
       "aliases": [
         "sqlite",
         "sqlite3"
+      ],
+      "implies": [
+        "sql",
+        "relational databases"
+      ],
+      "similar_skills": [
+        "oracle database",
+        "mariadb",
+        "microsoft sql server"
       ]
     },
     "DB2": {
@@ -576,6 +1169,15 @@
       "aliases": [
         "mariadb",
         "maria db"
+      ],
+      "implies": [
+        "sql",
+        "relational databases"
+      ],
+      "similar_skills": [
+        "sqlite",
+        "mysql",
+        "oracle database"
       ]
     },
     "Elasticsearch": {
@@ -583,13 +1185,31 @@
       "aliases": [
         "elasticsearch",
         "elastic search",
-        "elastic"
+        "elastic",
+        "es"
+      ],
+      "implies": [
+        "search engines"
+      ],
+      "similar_skills": [
+        "opensearch",
+        "orientdb",
+        "apache solr"
       ]
     },
     "Neo4j": {
       "category": "Database",
       "aliases": [
-        "neo4j"
+        "neo4j",
+        "neo 4j"
+      ],
+      "implies": [
+        "graph databases"
+      ],
+      "similar_skills": [
+        "janusgraph",
+        "arangodb",
+        "orientdb"
       ]
     },
     "CouchDB": {
@@ -597,6 +1217,14 @@
       "aliases": [
         "couchdb",
         "couch db"
+      ],
+      "implies": [
+        "nosql"
+      ],
+      "similar_skills": [
+        "apache cassandra",
+        "couchbase",
+        "scylladb"
       ]
     },
     "HBase": {
@@ -604,18 +1232,47 @@
       "aliases": [
         "hbase",
         "apache hbase"
+      ],
+      "implies": [
+        "nosql",
+        "hadoop"
+      ],
+      "similar_skills": [
+        "google bigtable",
+        "scylladb",
+        "firestore"
       ]
     },
     "Teradata": {
       "category": "Database",
       "aliases": [
-        "teradata"
+        "teradata",
+        "teradata database"
+      ],
+      "implies": [
+        "sql",
+        "data warehousing"
+      ],
+      "similar_skills": [
+        "sap hana",
+        "sybase ase",
+        "amazon aurora"
       ]
     },
     "Snowflake": {
       "category": "Database",
       "aliases": [
-        "snowflake"
+        "snowflake",
+        "snowflake data cloud"
+      ],
+      "implies": [
+        "sql",
+        "data warehousing"
+      ],
+      "similar_skills": [
+        "amazon redshift",
+        "google bigquery",
+        "azure synapse analytics"
       ]
     },
     "Redshift": {
@@ -637,7 +1294,17 @@
     "Firebase": {
       "category": "Database",
       "aliases": [
-        "firebase"
+        "firebase",
+        "google firebase"
+      ],
+      "implies": [
+        "google cloud platform",
+        "mobile development"
+      ],
+      "similar_skills": [
+        "supabase",
+        "netlify",
+        "render"
       ]
     },
     "MS Access": {
@@ -675,7 +1342,17 @@
     "Heroku": {
       "category": "Cloud",
       "aliases": [
-        "heroku"
+        "heroku",
+        "heroku platform"
+      ],
+      "implies": [
+        "cloud computing",
+        "platform as a service"
+      ],
+      "similar_skills": [
+        "cloudflare",
+        "digitalocean",
+        "vercel"
       ]
     },
     "DigitalOcean": {
@@ -683,6 +1360,14 @@
       "aliases": [
         "digitalocean",
         "digital ocean"
+      ],
+      "implies": [
+        "cloud computing"
+      ],
+      "similar_skills": [
+        "heroku",
+        "ibm cloud",
+        "cloudflare"
       ]
     },
     "IBM Cloud": {
@@ -690,7 +1375,16 @@
       "aliases": [
         "ibm cloud",
         "ibm bluemix",
-        "bluemix"
+        "bluemix",
+        "ibm cloud platform"
+      ],
+      "implies": [
+        "cloud computing"
+      ],
+      "similar_skills": [
+        "digitalocean",
+        "oracle cloud infrastructure",
+        "heroku"
       ]
     },
     "EC2": {
@@ -738,7 +1432,16 @@
     "Docker": {
       "category": "DevOps",
       "aliases": [
-        "docker"
+        "docker",
+        "docker engine"
+      ],
+      "implies": [
+        "containerization"
+      ],
+      "similar_skills": [
+        "podman",
+        "containerd",
+        "cri-o"
       ]
     },
     "Kubernetes": {
@@ -746,42 +1449,110 @@
       "aliases": [
         "kubernetes",
         "k8s"
+      ],
+      "implies": [
+        "containerization",
+        "orchestration"
+      ],
+      "similar_skills": [
+        "openshift",
+        "buildah",
+        "rancher"
       ]
     },
     "Jenkins": {
       "category": "DevOps",
       "aliases": [
-        "jenkins"
+        "jenkins",
+        "jenkins ci"
+      ],
+      "implies": [
+        "ci/cd",
+        "automation"
+      ],
+      "similar_skills": [
+        "github actions",
+        "gitlab ci/cd",
+        "circleci"
       ]
     },
     "Ansible": {
       "category": "DevOps",
       "aliases": [
-        "ansible"
+        "ansible",
+        "red hat ansible"
+      ],
+      "implies": [
+        "configuration management",
+        "automation"
+      ],
+      "similar_skills": [
+        "chef",
+        "vagrant",
+        "puppet"
       ]
     },
     "Terraform": {
       "category": "DevOps",
       "aliases": [
-        "terraform"
+        "terraform",
+        "hashicorp terraform"
+      ],
+      "implies": [
+        "infrastructure as code"
+      ],
+      "similar_skills": [
+        "opentofu",
+        "terragrunt",
+        "pulumi"
       ]
     },
     "Chef": {
       "category": "DevOps",
       "aliases": [
-        "chef"
+        "chef",
+        "chef infra"
+      ],
+      "implies": [
+        "configuration management",
+        "automation"
+      ],
+      "similar_skills": [
+        "puppet",
+        "ansible",
+        "saltstack"
       ]
     },
     "Puppet": {
       "category": "DevOps",
       "aliases": [
-        "puppet"
+        "puppet",
+        "puppet enterprise"
+      ],
+      "implies": [
+        "configuration management",
+        "automation"
+      ],
+      "similar_skills": [
+        "saltstack",
+        "chef",
+        "hashicorp vault"
       ]
     },
     "Vagrant": {
       "category": "DevOps",
       "aliases": [
-        "vagrant"
+        "vagrant",
+        "hashicorp vagrant"
+      ],
+      "implies": [
+        "virtualization",
+        "automation"
+      ],
+      "similar_skills": [
+        "ansible",
+        "packer",
+        "chef"
       ]
     },
     "CI/CD": {
@@ -793,6 +1564,15 @@
         "continuous integration",
         "continuous delivery",
         "continuous deployment"
+      ],
+      "implies": [
+        "devops",
+        "automation"
+      ],
+      "similar_skills": [
+        "devops",
+        "build automation",
+        "site reliability engineering"
       ]
     },
     "CircleCI": {
@@ -800,6 +1580,14 @@
       "aliases": [
         "circleci",
         "circle ci"
+      ],
+      "implies": [
+        "ci/cd"
+      ],
+      "similar_skills": [
+        "travis ci",
+        "gitlab ci/cd",
+        "bamboo"
       ]
     },
     "Travis CI": {
@@ -808,12 +1596,31 @@
         "travis ci",
         "travisci",
         "travis"
+      ],
+      "implies": [
+        "ci/cd"
+      ],
+      "similar_skills": [
+        "bamboo",
+        "circleci",
+        "teamcity"
       ]
     },
     "GitHub Actions": {
       "category": "DevOps",
       "aliases": [
-        "github actions"
+        "github actions",
+        "actions",
+        "gh actions"
+      ],
+      "implies": [
+        "github",
+        "ci/cd"
+      ],
+      "similar_skills": [
+        "gitlab ci/cd",
+        "jenkins",
+        "circleci"
       ]
     },
     "GitLab CI": {
@@ -826,7 +1633,16 @@
     "Bamboo": {
       "category": "DevOps",
       "aliases": [
-        "bamboo"
+        "bamboo",
+        "atlassian bamboo"
+      ],
+      "implies": [
+        "ci/cd"
+      ],
+      "similar_skills": [
+        "teamcity",
+        "travis ci",
+        "tekton"
       ]
     },
     "Nagios": {
@@ -838,13 +1654,33 @@
     "Prometheus": {
       "category": "DevOps",
       "aliases": [
-        "prometheus"
+        "prometheus",
+        "prometheus monitoring"
+      ],
+      "implies": [
+        "observability",
+        "infrastructure monitoring"
+      ],
+      "similar_skills": [
+        "grafana",
+        "loki",
+        "tempo"
       ]
     },
     "Grafana": {
       "category": "DevOps",
       "aliases": [
-        "grafana"
+        "grafana",
+        "grafana dashboards"
+      ],
+      "implies": [
+        "observability",
+        "data visualization"
+      ],
+      "similar_skills": [
+        "loki",
+        "prometheus",
+        "tempo"
       ]
     },
     "ELK Stack": {
@@ -857,7 +1693,17 @@
     "Splunk": {
       "category": "DevOps",
       "aliases": [
-        "splunk"
+        "splunk",
+        "splunk enterprise"
+      ],
+      "implies": [
+        "logging",
+        "observability"
+      ],
+      "similar_skills": [
+        "elastic stack",
+        "datadog",
+        "kibana"
       ]
     },
     "New Relic": {
@@ -865,30 +1711,79 @@
       "aliases": [
         "new relic",
         "newrelic"
+      ],
+      "implies": [
+        "observability",
+        "infrastructure monitoring"
+      ],
+      "similar_skills": [
+        "dynatrace",
+        "sentry",
+        "pagerduty"
       ]
     },
     "Git": {
       "category": "Version Control",
       "aliases": [
-        "git"
+        "git",
+        "git scm"
+      ],
+      "implies": [
+        "version control"
+      ],
+      "similar_skills": [
+        "github",
+        "gitlab",
+        "bitbucket"
       ]
     },
     "GitHub": {
       "category": "Version Control",
       "aliases": [
-        "github"
+        "github",
+        "github.com"
+      ],
+      "implies": [
+        "git",
+        "version control"
+      ],
+      "similar_skills": [
+        "gitlab",
+        "git",
+        "bitbucket"
       ]
     },
     "GitLab": {
       "category": "Version Control",
       "aliases": [
-        "gitlab"
+        "gitlab",
+        "gitlab.com"
+      ],
+      "implies": [
+        "git",
+        "version control",
+        "ci/cd"
+      ],
+      "similar_skills": [
+        "bitbucket",
+        "github",
+        "subversion"
       ]
     },
     "Bitbucket": {
       "category": "Version Control",
       "aliases": [
-        "bitbucket"
+        "bitbucket",
+        "atlassian bitbucket"
+      ],
+      "implies": [
+        "git",
+        "version control"
+      ],
+      "similar_skills": [
+        "subversion",
+        "gitlab",
+        "mercurial"
       ]
     },
     "SVN": {
@@ -924,18 +1819,46 @@
       "aliases": [
         "mercurial",
         "hg"
+      ],
+      "implies": [
+        "version control"
+      ],
+      "similar_skills": [
+        "azure repos",
+        "subversion",
+        "bitbucket"
       ]
     },
     "Maven": {
       "category": "Build Tool",
       "aliases": [
-        "maven"
+        "maven",
+        "apache maven"
+      ],
+      "implies": [
+        "java",
+        "build automation"
+      ],
+      "similar_skills": [
+        "gradle",
+        "ant",
+        "bazel"
       ]
     },
     "Gradle": {
       "category": "Build Tool",
       "aliases": [
-        "gradle"
+        "gradle",
+        "gradle build"
+      ],
+      "implies": [
+        "java",
+        "build automation"
+      ],
+      "similar_skills": [
+        "ant",
+        "maven",
+        "bazel"
       ]
     },
     "Ant": {
@@ -943,49 +1866,129 @@
       "aliases": [
         "ant",
         "apache ant"
+      ],
+      "implies": [
+        "java",
+        "build automation"
+      ],
+      "similar_skills": [
+        "bazel",
+        "gradle",
+        "cmake"
       ]
     },
     "npm": {
       "category": "Build Tool",
       "aliases": [
-        "npm"
+        "npm",
+        "node package manager"
+      ],
+      "implies": [
+        "node.js",
+        "package management"
+      ],
+      "similar_skills": [
+        "yarn",
+        "prettier",
+        "pnpm"
       ]
     },
     "Yarn": {
       "category": "Build Tool",
       "aliases": [
-        "yarn"
+        "yarn",
+        "yarnpkg"
+      ],
+      "implies": [
+        "node.js",
+        "package management"
+      ],
+      "similar_skills": [
+        "pnpm",
+        "npm",
+        "pip"
       ]
     },
     "Webpack": {
       "category": "Build Tool",
       "aliases": [
-        "webpack"
+        "webpack",
+        "webpack bundler"
+      ],
+      "implies": [
+        "javascript",
+        "build automation"
+      ],
+      "similar_skills": [
+        "vite",
+        "msbuild",
+        "rollup"
       ]
     },
     "pip": {
       "category": "Build Tool",
       "aliases": [
-        "pip"
+        "pip",
+        "pip3"
+      ],
+      "implies": [
+        "python",
+        "package management"
+      ],
+      "similar_skills": [
+        "poetry",
+        "pnpm",
+        "pipenv"
       ]
     },
     "Make": {
       "category": "Build Tool",
       "aliases": [
         "make",
-        "makefile"
+        "makefile",
+        "gnu make"
+      ],
+      "implies": [
+        "build automation"
+      ],
+      "similar_skills": [
+        "ninja",
+        "cmake",
+        "msbuild"
       ]
     },
     "CMake": {
       "category": "Build Tool",
       "aliases": [
-        "cmake"
+        "cmake",
+        "c make"
+      ],
+      "implies": [
+        "c",
+        "c++",
+        "build automation"
+      ],
+      "similar_skills": [
+        "make",
+        "bazel",
+        "ninja"
       ]
     },
     "JUnit": {
       "category": "Testing",
       "aliases": [
-        "junit"
+        "junit",
+        "junit 4",
+        "junit 5"
+      ],
+      "implies": [
+        "java",
+        "unit testing"
+      ],
+      "similar_skills": [
+        "testng",
+        "mockito",
+        "pytest"
       ]
     },
     "Selenium": {
@@ -993,48 +1996,128 @@
       "aliases": [
         "selenium",
         "selenium webdriver"
+      ],
+      "implies": [
+        "test automation",
+        "frontend development"
+      ],
+      "similar_skills": [
+        "cucumber",
+        "playwright",
+        "appium"
       ]
     },
     "TestNG": {
       "category": "Testing",
       "aliases": [
-        "testng"
+        "testng",
+        "test ng"
+      ],
+      "implies": [
+        "java",
+        "unit testing"
+      ],
+      "similar_skills": [
+        "mockito",
+        "junit",
+        "pytest"
       ]
     },
     "Mockito": {
       "category": "Testing",
       "aliases": [
-        "mockito"
+        "mockito",
+        "mockito framework"
+      ],
+      "implies": [
+        "java",
+        "unit testing"
+      ],
+      "similar_skills": [
+        "pytest",
+        "testng",
+        "unittest"
       ]
     },
     "Jest": {
       "category": "Testing",
       "aliases": [
-        "jest"
+        "jest",
+        "jestjs"
+      ],
+      "implies": [
+        "javascript",
+        "unit testing"
+      ],
+      "similar_skills": [
+        "mocha",
+        "robot framework",
+        "chai"
       ]
     },
     "Mocha": {
       "category": "Testing",
       "aliases": [
-        "mocha"
+        "mocha",
+        "mochajs"
+      ],
+      "implies": [
+        "javascript",
+        "unit testing"
+      ],
+      "similar_skills": [
+        "chai",
+        "jest",
+        "jasmine"
       ]
     },
     "Cypress": {
       "category": "Testing",
       "aliases": [
-        "cypress"
+        "cypress",
+        "cypress io"
+      ],
+      "implies": [
+        "javascript",
+        "test automation",
+        "frontend development"
+      ],
+      "similar_skills": [
+        "playwright",
+        "karma",
+        "selenium"
       ]
     },
     "PyTest": {
       "category": "Testing",
       "aliases": [
-        "pytest"
+        "pytest",
+        "py test"
+      ],
+      "implies": [
+        "python",
+        "unit testing"
+      ],
+      "similar_skills": [
+        "unittest",
+        "mockito",
+        "nose2"
       ]
     },
     "Cucumber": {
       "category": "Testing",
       "aliases": [
-        "cucumber"
+        "cucumber",
+        "cucumber bdd"
+      ],
+      "implies": [
+        "integration testing",
+        "test automation"
+      ],
+      "similar_skills": [
+        "appium",
+        "selenium",
+        "postman"
       ]
     },
     "JMeter": {
@@ -1056,12 +2139,31 @@
       "aliases": [
         "soapui",
         "soap ui"
+      ],
+      "implies": [
+        "api testing",
+        "soap"
+      ],
+      "similar_skills": [
+        "insomnia",
+        "postman",
+        "k6"
       ]
     },
     "Postman": {
       "category": "Testing",
       "aliases": [
-        "postman"
+        "postman",
+        "postman api platform"
+      ],
+      "implies": [
+        "api testing",
+        "api development"
+      ],
+      "similar_skills": [
+        "soapui",
+        "appium",
+        "insomnia"
       ]
     },
     "Apache Spark": {
@@ -1070,6 +2172,15 @@
         "spark",
         "apache spark",
         "pyspark"
+      ],
+      "implies": [
+        "data engineering",
+        "distributed systems"
+      ],
+      "similar_skills": [
+        "pyspark",
+        "delta lake",
+        "apache flink"
       ]
     },
     "Hadoop": {
@@ -1077,6 +2188,15 @@
       "aliases": [
         "hadoop",
         "apache hadoop"
+      ],
+      "implies": [
+        "data engineering",
+        "distributed systems"
+      ],
+      "similar_skills": [
+        "apache spark",
+        "apache hive",
+        "apache flink"
       ]
     },
     "Hive": {
@@ -1167,6 +2287,14 @@
       "aliases": [
         "etl",
         "extract transform load"
+      ],
+      "implies": [
+        "data engineering"
+      ],
+      "similar_skills": [
+        "elt",
+        "data modeling",
+        "data lakes"
       ]
     },
     "Data Warehousing": {
@@ -1175,14 +2303,33 @@
         "data warehousing",
         "data warehouse",
         "dwh",
-        "dw"
+        "dw",
+        "enterprise data warehouse"
+      ],
+      "implies": [
+        "data engineering",
+        "business intelligence"
+      ],
+      "similar_skills": [
+        "data engineering",
+        "data lakes",
+        "stream processing"
       ]
     },
     "Data Modeling": {
       "category": "Data Engineering",
       "aliases": [
         "data modeling",
-        "data modelling"
+        "data modelling",
+        "data model design"
+      ],
+      "implies": [
+        "database design"
+      ],
+      "similar_skills": [
+        "etl",
+        "vector search",
+        "elt"
       ]
     },
     "MapReduce": {
@@ -1195,7 +2342,18 @@
     "Tableau": {
       "category": "BI",
       "aliases": [
-        "tableau"
+        "tableau",
+        "tableau desktop",
+        "tableau server"
+      ],
+      "implies": [
+        "business intelligence",
+        "data visualization"
+      ],
+      "similar_skills": [
+        "power bi",
+        "databricks",
+        "looker"
       ]
     },
     "Power BI": {
@@ -1204,6 +2362,15 @@
         "power bi",
         "powerbi",
         "microsoft power bi"
+      ],
+      "implies": [
+        "business intelligence",
+        "data visualization"
+      ],
+      "similar_skills": [
+        "looker",
+        "tableau",
+        "qlik sense"
       ]
     },
     "QlikView": {
@@ -1217,13 +2384,33 @@
       "category": "BI",
       "aliases": [
         "qlik sense",
-        "qliksense"
+        "qliksense",
+        "qlik"
+      ],
+      "implies": [
+        "business intelligence",
+        "data visualization"
+      ],
+      "similar_skills": [
+        "metabase",
+        "looker",
+        "apache superset"
       ]
     },
     "Looker": {
       "category": "BI",
       "aliases": [
-        "looker"
+        "looker",
+        "google looker"
+      ],
+      "implies": [
+        "business intelligence",
+        "data visualization"
+      ],
+      "similar_skills": [
+        "qlik sense",
+        "power bi",
+        "metabase"
       ]
     },
     "MicroStrategy": {
@@ -1231,6 +2418,14 @@
       "aliases": [
         "microstrategy",
         "micro strategy"
+      ],
+      "implies": [
+        "business intelligence"
+      ],
+      "similar_skills": [
+        "sisense",
+        "domo",
+        "thoughtspot"
       ]
     },
     "Crystal Reports": {
@@ -1279,19 +2474,53 @@
       "category": "ML/AI",
       "aliases": [
         "tensorflow",
-        "tf"
+        "tf",
+        "tensor flow"
+      ],
+      "implies": [
+        "python",
+        "machine learning",
+        "deep learning"
+      ],
+      "similar_skills": [
+        "keras",
+        "scikit-learn",
+        "pytorch"
       ]
     },
     "PyTorch": {
       "category": "ML/AI",
       "aliases": [
-        "pytorch"
+        "pytorch",
+        "torch",
+        "py torch"
+      ],
+      "implies": [
+        "python",
+        "machine learning",
+        "deep learning"
+      ],
+      "similar_skills": [
+        "jax",
+        "keras",
+        "mxnet"
       ]
     },
     "Keras": {
       "category": "ML/AI",
       "aliases": [
-        "keras"
+        "keras",
+        "tf.keras"
+      ],
+      "implies": [
+        "tensorflow",
+        "python",
+        "deep learning"
+      ],
+      "similar_skills": [
+        "pytorch",
+        "tensorflow",
+        "jax"
       ]
     },
     "scikit-learn": {
@@ -1299,21 +2528,52 @@
       "aliases": [
         "scikit-learn",
         "sklearn",
-        "scikit learn"
+        "scikit learn",
+        "scikitlearn"
+      ],
+      "implies": [
+        "python",
+        "machine learning",
+        "statistics"
+      ],
+      "similar_skills": [
+        "tensorflow",
+        "keras",
+        "pytorch"
       ]
     },
     "Machine Learning": {
       "category": "ML/AI",
       "aliases": [
         "machine learning",
-        "ml"
+        "ml",
+        "predictive modeling"
+      ],
+      "implies": [
+        "statistics",
+        "data analysis",
+        "feature engineering"
+      ],
+      "similar_skills": [
+        "deep learning",
+        "natural language processing",
+        "computer vision"
       ]
     },
     "Deep Learning": {
       "category": "ML/AI",
       "aliases": [
         "deep learning",
-        "dl"
+        "dl",
+        "neural networks"
+      ],
+      "implies": [
+        "machine learning"
+      ],
+      "similar_skills": [
+        "natural language processing",
+        "machine learning",
+        "computer vision"
       ]
     },
     "Natural Language Processing": {
@@ -1321,73 +2581,199 @@
       "aliases": [
         "natural language processing",
         "nlp"
+      ],
+      "implies": [
+        "machine learning",
+        "deep learning"
+      ],
+      "similar_skills": [
+        "computer vision",
+        "deep learning",
+        "reinforcement learning"
       ]
     },
     "Computer Vision": {
       "category": "ML/AI",
       "aliases": [
         "computer vision",
-        "cv"
+        "cv",
+        "vision ai"
+      ],
+      "implies": [
+        "machine learning",
+        "deep learning"
+      ],
+      "similar_skills": [
+        "reinforcement learning",
+        "natural language processing",
+        "generative ai"
       ]
     },
     "OpenCV": {
       "category": "ML/AI",
       "aliases": [
-        "opencv"
+        "opencv",
+        "open cv",
+        "opencv-python"
+      ],
+      "implies": [
+        "python",
+        "computer vision"
+      ],
+      "similar_skills": [
+        "mediapipe",
+        "gensim",
+        "onnx"
       ]
     },
     "NLTK": {
       "category": "ML/AI",
       "aliases": [
-        "nltk"
+        "nltk",
+        "natural language toolkit"
+      ],
+      "implies": [
+        "python",
+        "natural language processing"
+      ],
+      "similar_skills": [
+        "gensim",
+        "spacy",
+        "opencv"
       ]
     },
     "spaCy": {
       "category": "ML/AI",
       "aliases": [
-        "spacy"
+        "spacy",
+        "spa cy"
+      ],
+      "implies": [
+        "python",
+        "natural language processing"
+      ],
+      "similar_skills": [
+        "nltk",
+        "stanza",
+        "gensim"
       ]
     },
     "Pandas": {
       "category": "ML/AI",
       "aliases": [
-        "pandas"
+        "pandas",
+        "pd",
+        "python pandas"
+      ],
+      "implies": [
+        "python",
+        "data analysis",
+        "data science"
+      ],
+      "similar_skills": [
+        "scipy",
+        "numpy",
+        "polars"
       ]
     },
     "NumPy": {
       "category": "ML/AI",
       "aliases": [
-        "numpy"
+        "numpy",
+        "np",
+        "num py"
+      ],
+      "implies": [
+        "python",
+        "data analysis"
+      ],
+      "similar_skills": [
+        "pandas",
+        "scipy",
+        "polars"
       ]
     },
     "SciPy": {
       "category": "ML/AI",
       "aliases": [
-        "scipy"
+        "scipy",
+        "sci py"
+      ],
+      "implies": [
+        "python",
+        "statistics",
+        "data science"
+      ],
+      "similar_skills": [
+        "polars",
+        "pandas",
+        "dask"
       ]
     },
     "Matplotlib": {
       "category": "ML/AI",
       "aliases": [
-        "matplotlib"
+        "matplotlib",
+        "mpl"
+      ],
+      "implies": [
+        "python",
+        "data visualization"
+      ],
+      "similar_skills": [
+        "seaborn",
+        "statsmodels",
+        "plotly"
       ]
     },
     "Seaborn": {
       "category": "ML/AI",
       "aliases": [
-        "seaborn"
+        "seaborn",
+        "seaborn library"
+      ],
+      "implies": [
+        "python",
+        "matplotlib",
+        "data visualization"
+      ],
+      "similar_skills": [
+        "plotly",
+        "matplotlib",
+        "bokeh"
       ]
     },
     "XGBoost": {
       "category": "ML/AI",
       "aliases": [
-        "xgboost"
+        "xgboost",
+        "xgb"
+      ],
+      "implies": [
+        "python",
+        "machine learning"
+      ],
+      "similar_skills": [
+        "lightgbm",
+        "paddlepaddle",
+        "catboost"
       ]
     },
     "LightGBM": {
       "category": "ML/AI",
       "aliases": [
-        "lightgbm"
+        "lightgbm",
+        "light gbm",
+        "lgbm"
+      ],
+      "implies": [
+        "python",
+        "machine learning"
+      ],
+      "similar_skills": [
+        "catboost",
+        "xgboost",
+        "fastai"
       ]
     },
     "Hugging Face": {
@@ -1401,13 +2787,36 @@
     "MLflow": {
       "category": "ML/AI",
       "aliases": [
-        "mlflow"
+        "mlflow",
+        "ml flow"
+      ],
+      "implies": [
+        "python",
+        "mlops",
+        "model deployment"
+      ],
+      "similar_skills": [
+        "kubeflow",
+        "dvc",
+        "bentoml"
       ]
     },
     "Data Science": {
       "category": "ML/AI",
       "aliases": [
-        "data science"
+        "data science",
+        "datascience",
+        "applied data science"
+      ],
+      "implies": [
+        "data analysis",
+        "statistics",
+        "machine learning"
+      ],
+      "similar_skills": [
+        "machine learning",
+        "analytics",
+        "data analysis"
       ]
     },
     "HTML": {
@@ -1415,7 +2824,17 @@
       "aliases": [
         "html",
         "html5",
-        "html 5"
+        "html 5",
+        "hypertext markup language"
+      ],
+      "implies": [
+        "frontend development",
+        "web development"
+      ],
+      "similar_skills": [
+        "css",
+        "yaml",
+        "xml"
       ]
     },
     "CSS": {
@@ -1423,19 +2842,47 @@
       "aliases": [
         "css",
         "css3",
-        "css 3"
+        "css 3",
+        "cascading style sheets"
+      ],
+      "implies": [
+        "frontend development",
+        "web development"
+      ],
+      "similar_skills": [
+        "html",
+        "yaml",
+        "xml"
       ]
     },
     "XML": {
       "category": "Web Technology",
       "aliases": [
-        "xml"
+        "xml",
+        "extensible markup language"
+      ],
+      "implies": [
+        "api development"
+      ],
+      "similar_skills": [
+        "yaml",
+        "json",
+        "html"
       ]
     },
     "JSON": {
       "category": "Web Technology",
       "aliases": [
-        "json"
+        "json",
+        "javascript object notation"
+      ],
+      "implies": [
+        "api development"
+      ],
+      "similar_skills": [
+        "xml",
+        "protobuf",
+        "yaml"
       ]
     },
     "AJAX": {
@@ -1458,20 +2905,51 @@
       "category": "Web Technology",
       "aliases": [
         "soap",
-        "soap api"
+        "soap api",
+        "soap web services"
+      ],
+      "implies": [
+        "api development",
+        "xml"
+      ],
+      "similar_skills": [
+        "microservices",
+        "graphql",
+        "event-driven architecture"
       ]
     },
     "GraphQL": {
       "category": "Web Technology",
       "aliases": [
-        "graphql"
+        "graphql",
+        "graphql api"
+      ],
+      "implies": [
+        "api development",
+        "json"
+      ],
+      "similar_skills": [
+        "soap",
+        "rest api",
+        "microservices"
       ]
     },
     "WebSocket": {
       "category": "Web Technology",
       "aliases": [
         "websocket",
-        "websockets"
+        "websockets",
+        "web sockets",
+        "ws"
+      ],
+      "implies": [
+        "http",
+        "networking"
+      ],
+      "similar_skills": [
+        "grpc",
+        "http",
+        "protobuf"
       ]
     },
     "XSLT": {
@@ -1503,14 +2981,35 @@
       "category": "Web Technology",
       "aliases": [
         "microservices",
-        "micro services"
+        "micro services",
+        "microservice architecture"
+      ],
+      "implies": [
+        "api development",
+        "distributed systems"
+      ],
+      "similar_skills": [
+        "event-driven architecture",
+        "soap",
+        "distributed systems"
       ]
     },
     "API Development": {
       "category": "Web Technology",
       "aliases": [
         "api development",
-        "api design"
+        "api design",
+        "service development"
+      ],
+      "implies": [
+        "backend development",
+        "http",
+        "json"
+      ],
+      "similar_skills": [
+        "rest api",
+        "mobile development",
+        "graphql"
       ]
     },
     "OAuth": {
@@ -1525,7 +3024,17 @@
       "category": "Web Technology",
       "aliases": [
         "jwt",
-        "json web token"
+        "json web token",
+        "jwts"
+      ],
+      "implies": [
+        "identity and access management",
+        "security engineering"
+      ],
+      "similar_skills": [
+        "tls/ssl",
+        "saml",
+        "openid connect"
       ]
     },
     "SASS": {
@@ -1544,31 +3053,81 @@
     "iOS": {
       "category": "Mobile",
       "aliases": [
-        "ios"
+        "ios",
+        "apple ios"
+      ],
+      "implies": [
+        "mobile development"
+      ],
+      "similar_skills": [
+        "android",
+        "macos",
+        "windows server"
       ]
     },
     "Android": {
       "category": "Mobile",
       "aliases": [
-        "android"
+        "android",
+        "android os"
+      ],
+      "implies": [
+        "mobile development"
+      ],
+      "similar_skills": [
+        "ios",
+        "macos",
+        "windows server"
       ]
     },
     "React Native": {
       "category": "Mobile",
       "aliases": [
-        "react native"
+        "react native",
+        "reactnative",
+        "rn"
+      ],
+      "implies": [
+        "react",
+        "javascript",
+        "mobile development"
+      ],
+      "similar_skills": [
+        "ionic",
+        "flutter",
+        "capacitor"
       ]
     },
     "Flutter": {
       "category": "Mobile",
       "aliases": [
-        "flutter"
+        "flutter",
+        "flutter sdk"
+      ],
+      "implies": [
+        "dart",
+        "mobile development"
+      ],
+      "similar_skills": [
+        "react native",
+        "ionic",
+        "capacitor"
       ]
     },
     "Xamarin": {
       "category": "Mobile",
       "aliases": [
-        "xamarin"
+        "xamarin",
+        "xamarin forms"
+      ],
+      "implies": [
+        "c#",
+        "mobile development"
+      ],
+      "similar_skills": [
+        "signalr",
+        "maui",
+        "winforms"
       ]
     },
     "Xcode": {
@@ -1599,13 +3158,32 @@
         "red hat",
         "rhel",
         "debian",
-        "fedora"
+        "fedora",
+        "gnu/linux",
+        "linux os"
+      ],
+      "implies": [
+        "linux administration"
+      ],
+      "similar_skills": [
+        "ubuntu",
+        "debian",
+        "red hat enterprise linux"
       ]
     },
     "Unix": {
       "category": "Operating System",
       "aliases": [
-        "unix"
+        "unix",
+        "unix systems"
+      ],
+      "implies": [
+        "linux administration"
+      ],
+      "similar_skills": [
+        "windows server",
+        "fedora",
+        "macos"
       ]
     },
     "Windows": {
@@ -1623,7 +3201,16 @@
         "macos",
         "mac os",
         "osx",
-        "os x"
+        "os x",
+        "macos x"
+      ],
+      "implies": [
+        "unix"
+      ],
+      "similar_skills": [
+        "ios",
+        "windows server",
+        "android"
       ]
     },
     "Apache Tomcat": {
@@ -1657,7 +3244,17 @@
     "Nginx": {
       "category": "Server",
       "aliases": [
-        "nginx"
+        "nginx",
+        "nginx web server"
+      ],
+      "implies": [
+        "networking",
+        "web development"
+      ],
+      "similar_skills": [
+        "apache http server",
+        "haproxy",
+        "traefik"
       ]
     },
     "Apache HTTP": {
@@ -1680,6 +3277,14 @@
       "aliases": [
         "rabbitmq",
         "rabbit mq"
+      ],
+      "implies": [
+        "message queuing"
+      ],
+      "similar_skills": [
+        "apache kafka",
+        "apache pulsar",
+        "activemq"
       ]
     },
     "ActiveMQ": {
@@ -1688,6 +3293,14 @@
         "activemq",
         "active mq",
         "apache activemq"
+      ],
+      "implies": [
+        "message queuing"
+      ],
+      "similar_skills": [
+        "nats",
+        "apache pulsar",
+        "zeromq"
       ]
     },
     "Agile": {
@@ -1758,7 +3371,19 @@
     "DevOps": {
       "category": "Methodology",
       "aliases": [
-        "devops"
+        "devops",
+        "dev sec ops",
+        "devsecops"
+      ],
+      "implies": [
+        "ci/cd",
+        "infrastructure as code",
+        "configuration management"
+      ],
+      "similar_skills": [
+        "site reliability engineering",
+        "ci/cd",
+        "observability"
       ]
     },
     "JIRA": {
@@ -1935,7 +3560,16 @@
       "aliases": [
         "tcp/ip",
         "tcp ip",
-        "tcp"
+        "tcp",
+        "tcp/ip networking"
+      ],
+      "implies": [
+        "networking"
+      ],
+      "similar_skills": [
+        "http",
+        "networking",
+        "websocket"
       ]
     },
     "DNS": {
@@ -1966,7 +3600,16 @@
       "category": "Networking",
       "aliases": [
         "load balancing",
-        "load balancer"
+        "load balancer",
+        "traffic load balancing"
+      ],
+      "implies": [
+        "networking"
+      ],
+      "similar_skills": [
+        "networking",
+        "service discovery",
+        "nginx"
       ]
     },
     "LAN/WAN": {
@@ -2197,7 +3840,17 @@
     "Design Patterns": {
       "category": "Design",
       "aliases": [
-        "design patterns"
+        "design patterns",
+        "software design patterns"
+      ],
+      "implies": [
+        "software development",
+        "object-oriented programming"
+      ],
+      "similar_skills": [
+        "concurrency",
+        "data structures",
+        "multithreading"
       ]
     },
     "MVC": {
@@ -2232,13 +3885,33 @@
     "Data Structures": {
       "category": "Design",
       "aliases": [
-        "data structures"
+        "data structures",
+        "ds",
+        "data structure design"
+      ],
+      "implies": [
+        "programming"
+      ],
+      "similar_skills": [
+        "design patterns",
+        "algorithms",
+        "concurrency"
       ]
     },
     "Algorithms": {
       "category": "Design",
       "aliases": [
-        "algorithms"
+        "algorithms",
+        "algorithm design"
+      ],
+      "implies": [
+        "programming",
+        "data structures"
+      ],
+      "similar_skills": [
+        "data structures",
+        "scripting",
+        "design patterns"
       ]
     },
     "System Design": {
@@ -2376,9 +4049,9 @@
     "es2017": "JavaScript",
     "typescript": "TypeScript",
     "ts": "TypeScript",
-    "c": "C",
     "c language": "C",
     "c programming": "C",
+    "c": "C",
     "c++": "C++",
     "cpp": "C++",
     "c plus plus": "C++",
@@ -2396,10 +4069,10 @@
     "swift": "Swift",
     "kotlin": "Kotlin",
     "scala": "Scala",
-    "r": "R",
     "r language": "R",
     "r programming": "R",
     "r-lang": "R",
+    "r": "R",
     "perl": "Perl",
     "shell scripting": "Shell Scripting",
     "bash": "Shell Scripting",
@@ -2449,16 +4122,16 @@
     "angular js": "Angular",
     "angular 2": "Angular",
     "angular2": "Angular",
-    "vue.js": "Vue.js",
     "vue": "Vue.js",
+    "vue.js": "Vue.js",
     "vuejs": "Vue.js",
     "vue js": "Vue.js",
     "node.js": "Node.js",
     "nodejs": "Node.js",
     "node js": "Node.js",
     "node": "Node.js",
-    "express.js": "Express.js",
     "express": "Express.js",
+    "express.js": "Express.js",
     "expressjs": "Express.js",
     "django": "Django",
     "flask": "Flask",
@@ -2490,22 +4163,22 @@
     "jquery": "jQuery",
     "j query": "jQuery",
     "bootstrap": "Bootstrap",
-    "tailwind css": "Tailwind CSS",
     "tailwind": "Tailwind CSS",
     "tailwindcss": "Tailwind CSS",
+    "tailwind css": "Tailwind CSS",
     "next.js": "Next.js",
     "nextjs": "Next.js",
     "next js": "Next.js",
-    "nuxt.js": "Nuxt.js",
     "nuxt": "Nuxt.js",
+    "nuxt.js": "Nuxt.js",
     "nuxtjs": "Nuxt.js",
     "svelte": "Svelte",
     "sveltekit": "Svelte",
-    "ember.js": "Ember.js",
     "ember": "Ember.js",
+    "ember.js": "Ember.js",
     "emberjs": "Ember.js",
-    "backbone.js": "Backbone.js",
     "backbone": "Backbone.js",
+    "backbone.js": "Backbone.js",
     "backbonejs": "Backbone.js",
     "laravel": "Laravel",
     "symfony": "Symfony",
@@ -2582,8 +4255,8 @@
     "azure": "Azure",
     "microsoft azure": "Azure",
     "ms azure": "Azure",
-    "google cloud": "Google Cloud",
     "gcp": "Google Cloud",
+    "google cloud": "Google Cloud",
     "google cloud platform": "Google Cloud",
     "heroku": "Heroku",
     "digitalocean": "DigitalOcean",
@@ -2630,8 +4303,8 @@
     "nagios": "Nagios",
     "prometheus": "Prometheus",
     "grafana": "Grafana",
-    "elk stack": "ELK Stack",
     "elk": "ELK Stack",
+    "elk stack": "ELK Stack",
     "splunk": "Splunk",
     "new relic": "New Relic",
     "newrelic": "New Relic",
@@ -2677,8 +4350,8 @@
     "soapui": "SoapUI",
     "soap ui": "SoapUI",
     "postman": "Postman",
-    "apache spark": "Apache Spark",
     "spark": "Apache Spark",
+    "apache spark": "Apache Spark",
     "pyspark": "Apache Spark",
     "hadoop": "Hadoop",
     "apache hadoop": "Hadoop",
@@ -2829,8 +4502,8 @@
     "mac os": "macOS",
     "osx": "macOS",
     "os x": "macOS",
-    "apache tomcat": "Apache Tomcat",
     "tomcat": "Apache Tomcat",
+    "apache tomcat": "Apache Tomcat",
     "weblogic": "WebLogic",
     "oracle weblogic": "WebLogic",
     "websphere": "WebSphere",
@@ -2892,8 +4565,8 @@
     "ms project": "MS Project",
     "microsoft project": "MS Project",
     "eclipse": "Eclipse",
-    "intellij idea": "IntelliJ IDEA",
     "intellij": "IntelliJ IDEA",
+    "intellij idea": "IntelliJ IDEA",
     "visual studio": "Visual Studio",
     "vs": "Visual Studio",
     "vs code": "VS Code",
@@ -2905,8 +4578,8 @@
     "rad": "RAD",
     "rational application developer": "RAD",
     "android studio": "Android Studio",
-    "sublime text": "Sublime Text",
     "sublime": "Sublime Text",
+    "sublime text": "Sublime Text",
     "atom": "Atom",
     "tcp/ip": "TCP/IP",
     "tcp ip": "TCP/IP",
@@ -2917,9 +4590,9 @@
     "firewall": "Firewall",
     "load balancing": "Load Balancing",
     "load balancer": "Load Balancing",
-    "lan/wan": "LAN/WAN",
     "lan": "LAN/WAN",
     "wan": "LAN/WAN",
+    "lan/wan": "LAN/WAN",
     "active directory": "Active Directory",
     "ad": "Active Directory",
     "ldap": "LDAP",
@@ -2996,29 +4669,533 @@
     "taleo": "Taleo",
     "icims": "iCIMS",
     "linkedin recruiter": "LinkedIn Recruiter",
-    "brassring": "BrassRing"
+    "brassring": "BrassRing",
+    "yarnpkg": "Yarn",
+    "algorithm design": "Algorithms",
+    "pd": "Pandas",
+    "python pandas": "Pandas",
+    "java se": "Java",
+    "jvm java": "Java",
+    "django framework": "Django",
+    "sci py": "SciPy",
+    "chef infra": "Chef",
+    "np": "NumPy",
+    "num py": "NumPy",
+    "hashicorp terraform": "Terraform",
+    "scikitlearn": "scikit-learn",
+    "py test": "PyTest",
+    "angular 2+": "Angular",
+    "angular framework": "Angular",
+    "asp net": "ASP.NET",
+    "teradata database": "Teradata",
+    "perl5": "Perl",
+    "puppet enterprise": "Puppet",
+    "apache struts": "Struts",
+    "docker engine": "Docker",
+    "ds": "Data Structures",
+    "data structure design": "Data Structures",
+    "next": "Next.js",
+    "xgb": "XGBoost",
+    "google looker": "Looker",
+    "redis cache": "Redis",
+    "symfony framework": "Symfony",
+    "mongo db": "MongoDB",
+    "c make": "CMake",
+    "neural networks": "Deep Learning",
+    "svelte framework": "Svelte",
+    "google firebase": "Firebase",
+    "gnu/linux": "Linux",
+    "linux os": "Linux",
+    "ml flow": "MLflow",
+    "apache maven": "Maven",
+    "node package manager": "npm",
+    "microservice architecture": "Microservices",
+    "prometheus monitoring": "Prometheus",
+    "hashicorp vagrant": "Vagrant",
+    "cucumber bdd": "Cucumber",
+    "git scm": "Git",
+    "dotnet c#": "C#",
+    "actions": "GitHub Actions",
+    "gh actions": "GitHub Actions",
+    "torch": "PyTorch",
+    "py torch": "PyTorch",
+    "matlab language": "MATLAB",
+    "unix systems": "Unix",
+    "haskell language": "Haskell",
+    "rust language": "Rust",
+    "heroku platform": "Heroku",
+    "github.com": "GitHub",
+    "seaborn library": "Seaborn",
+    "extensible markup language": "XML",
+    "atlassian bitbucket": "Bitbucket",
+    "clojure language": "Clojure",
+    "tcp/ip networking": "TCP/IP",
+    "junit 4": "JUnit",
+    "junit 5": "JUnit",
+    "pip3": "pip",
+    "scala language": "Scala",
+    "laravel framework": "Laravel",
+    "dev sec ops": "DevOps",
+    "devsecops": "DevOps",
+    "grafana dashboards": "Grafana",
+    "vision ai": "Computer Vision",
+    "macos x": "macOS",
+    "jenkins ci": "Jenkins",
+    "software design patterns": "Design Patterns",
+    "rb": "Ruby",
+    "open cv": "OpenCV",
+    "opencv-python": "OpenCV",
+    "red hat ansible": "Ansible",
+    "ibm cloud platform": "IBM Cloud",
+    "hibernate orm": "Hibernate",
+    "jestjs": "Jest",
+    "sas language": "SAS",
+    "base sas": "SAS",
+    "mochajs": "Mocha",
+    "postman api platform": "Postman",
+    "test ng": "TestNG",
+    "assembly language": "Assembly",
+    "cascading style sheets": "CSS",
+    "tableau desktop": "Tableau",
+    "tableau server": "Tableau",
+    "nginx web server": "Nginx",
+    "gradle build": "Gradle",
+    "kotlin language": "Kotlin",
+    "service development": "API Development",
+    "javascript object notation": "JSON",
+    "cypress io": "Cypress",
+    "android os": "Android",
+    "apple ios": "iOS",
+    "gitlab.com": "GitLab",
+    "qlik": "Qlik Sense",
+    "neo 4j": "Neo4j",
+    "cobol language": "COBOL",
+    "datascience": "Data Science",
+    "applied data science": "Data Science",
+    "data model design": "Data Modeling",
+    "soap web services": "SOAP",
+    "lua language": "Lua",
+    "predictive modeling": "Machine Learning",
+    "snowflake data cloud": "Snowflake",
+    "oracle pl/sql": "PL/SQL",
+    "reactnative": "React Native",
+    "rn": "React Native",
+    "mockito framework": "Mockito",
+    "hypertext markup language": "HTML",
+    "tensor flow": "TensorFlow",
+    "flutter sdk": "Flutter",
+    "atlassian bamboo": "Bamboo",
+    "traffic load balancing": "Load Balancing",
+    "light gbm": "LightGBM",
+    "lgbm": "LightGBM",
+    "gnu make": "Make",
+    "xamarin forms": "Xamarin",
+    "tf.keras": "Keras",
+    "es": "Elasticsearch",
+    "graphql api": "GraphQL",
+    "flask framework": "Flask",
+    "enterprise data warehouse": "Data Warehousing",
+    "mpl": "Matplotlib",
+    "spa cy": "spaCy",
+    "r stats": "R",
+    "dart language": "Dart",
+    "natural language toolkit": "NLTK",
+    "splunk enterprise": "Splunk",
+    "jwts": "JWT",
+    "pwsh": "PowerShell",
+    "windows powershell": "PowerShell",
+    "webpack bundler": "Webpack",
+    "groovy language": "Groovy",
+    "twitter bootstrap": "Bootstrap",
+    "erlang otp": "Erlang",
+    "jquery library": "jQuery",
+    "web sockets": "WebSocket",
+    "ws": "WebSocket",
+    "swift language": "Swift"
   },
-  "categories": [
-    "BI",
-    "Build Tool",
-    "Cloud",
-    "Data Engineering",
-    "Database",
-    "Design",
-    "DevOps",
-    "Framework",
-    "IDE",
-    "ML/AI",
-    "Methodology",
-    "Mobile",
-    "Networking",
-    "Operating System",
-    "Programming Language",
-    "Server",
-    "Soft Skill",
-    "Testing",
-    "Tool",
-    "Version Control",
-    "Web Technology"
-  ]
+  "categories": {
+    "Programming Language": [
+      "Java",
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "C",
+      "C++",
+      "C#",
+      "Go",
+      "Rust",
+      "Ruby",
+      "PHP",
+      "Swift",
+      "Kotlin",
+      "Scala",
+      "R",
+      "Perl",
+      "Shell Scripting",
+      "SQL",
+      "PL/SQL",
+      "T-SQL",
+      "Objective-C",
+      "Groovy",
+      "Dart",
+      "MATLAB",
+      "SAS",
+      "COBOL",
+      "Visual Basic",
+      "Assembly",
+      "Lua",
+      "Haskell",
+      "Clojure",
+      "Erlang",
+      "PowerShell"
+    ],
+    "Framework": [
+      "React",
+      "Angular",
+      "Vue.js",
+      "Node.js",
+      "Express.js",
+      "Django",
+      "Flask",
+      "FastAPI",
+      "Spring",
+      "Hibernate",
+      "Struts",
+      "Ruby on Rails",
+      "ASP.NET",
+      ".NET",
+      "jQuery",
+      "Bootstrap",
+      "Tailwind CSS",
+      "Next.js",
+      "Nuxt.js",
+      "Svelte",
+      "Ember.js",
+      "Backbone.js",
+      "Laravel",
+      "Symfony",
+      "JSP",
+      "JSF",
+      "EJB",
+      "JPA",
+      "JDBC",
+      "JMS",
+      "Servlets"
+    ],
+    "Database": [
+      "Oracle",
+      "MySQL",
+      "PostgreSQL",
+      "SQL Server",
+      "MongoDB",
+      "Redis",
+      "Cassandra",
+      "DynamoDB",
+      "SQLite",
+      "DB2",
+      "MariaDB",
+      "Elasticsearch",
+      "Neo4j",
+      "CouchDB",
+      "HBase",
+      "Teradata",
+      "Snowflake",
+      "Redshift",
+      "BigQuery",
+      "Firebase",
+      "MS Access"
+    ],
+    "Cloud": [
+      "AWS",
+      "Azure",
+      "Google Cloud",
+      "Heroku",
+      "DigitalOcean",
+      "IBM Cloud",
+      "EC2",
+      "S3",
+      "Lambda",
+      "CloudFormation",
+      "SQS",
+      "SNS"
+    ],
+    "DevOps": [
+      "Docker",
+      "Kubernetes",
+      "Jenkins",
+      "Ansible",
+      "Terraform",
+      "Chef",
+      "Puppet",
+      "Vagrant",
+      "CI/CD",
+      "CircleCI",
+      "Travis CI",
+      "GitHub Actions",
+      "GitLab CI",
+      "Bamboo",
+      "Nagios",
+      "Prometheus",
+      "Grafana",
+      "ELK Stack",
+      "Splunk",
+      "New Relic"
+    ],
+    "Version Control": [
+      "Git",
+      "GitHub",
+      "GitLab",
+      "Bitbucket",
+      "SVN",
+      "CVS",
+      "Perforce",
+      "TFS",
+      "Mercurial"
+    ],
+    "Build Tool": [
+      "Maven",
+      "Gradle",
+      "Ant",
+      "npm",
+      "Yarn",
+      "Webpack",
+      "pip",
+      "Make",
+      "CMake"
+    ],
+    "Testing": [
+      "JUnit",
+      "Selenium",
+      "TestNG",
+      "Mockito",
+      "Jest",
+      "Mocha",
+      "Cypress",
+      "PyTest",
+      "Cucumber",
+      "JMeter",
+      "LoadRunner",
+      "SoapUI",
+      "Postman"
+    ],
+    "Data Engineering": [
+      "Apache Spark",
+      "Hadoop",
+      "Hive",
+      "Pig",
+      "Kafka",
+      "Airflow",
+      "NiFi",
+      "Informatica",
+      "Talend",
+      "SSIS",
+      "SSRS",
+      "SSAS",
+      "DataStage",
+      "Ab Initio",
+      "ETL",
+      "Data Warehousing",
+      "Data Modeling",
+      "MapReduce"
+    ],
+    "BI": [
+      "Tableau",
+      "Power BI",
+      "QlikView",
+      "Qlik Sense",
+      "Looker",
+      "MicroStrategy",
+      "Crystal Reports",
+      "Cognos",
+      "OBIEE",
+      "SAS Visual Analytics",
+      "SAP BusinessObjects",
+      "Pentaho"
+    ],
+    "ML/AI": [
+      "TensorFlow",
+      "PyTorch",
+      "Keras",
+      "scikit-learn",
+      "Machine Learning",
+      "Deep Learning",
+      "Natural Language Processing",
+      "Computer Vision",
+      "OpenCV",
+      "NLTK",
+      "spaCy",
+      "Pandas",
+      "NumPy",
+      "SciPy",
+      "Matplotlib",
+      "Seaborn",
+      "XGBoost",
+      "LightGBM",
+      "Hugging Face",
+      "MLflow",
+      "Data Science"
+    ],
+    "Web Technology": [
+      "HTML",
+      "CSS",
+      "XML",
+      "JSON",
+      "AJAX",
+      "REST",
+      "SOAP",
+      "GraphQL",
+      "WebSocket",
+      "XSLT",
+      "XSD",
+      "WSDL",
+      "Web Services",
+      "Microservices",
+      "API Development",
+      "OAuth",
+      "JWT",
+      "SASS",
+      "LESS"
+    ],
+    "Mobile": [
+      "iOS",
+      "Android",
+      "React Native",
+      "Flutter",
+      "Xamarin",
+      "Xcode",
+      "Cocoa Touch",
+      "Core Data"
+    ],
+    "Operating System": [
+      "Linux",
+      "Unix",
+      "Windows",
+      "macOS"
+    ],
+    "Server": [
+      "Apache Tomcat",
+      "WebLogic",
+      "WebSphere",
+      "JBoss",
+      "Nginx",
+      "Apache HTTP",
+      "IIS",
+      "RabbitMQ",
+      "ActiveMQ"
+    ],
+    "Methodology": [
+      "Agile",
+      "Scrum",
+      "Kanban",
+      "Waterfall",
+      "SAFe",
+      "Lean",
+      "Six Sigma",
+      "SDLC",
+      "TDD",
+      "BDD",
+      "DevOps"
+    ],
+    "Tool": [
+      "JIRA",
+      "Confluence",
+      "Trello",
+      "Asana",
+      "Slack",
+      "Microsoft Teams",
+      "ServiceNow",
+      "Remedy",
+      "SharePoint",
+      "Visio",
+      "MS Office",
+      "MS Excel",
+      "MS Word",
+      "MS PowerPoint",
+      "MS Project",
+      "Log4j",
+      "SLF4J",
+      "TOAD",
+      "PuTTY",
+      "FileZilla",
+      "WinSCP",
+      "Wireshark",
+      "Fiddler",
+      "SAP",
+      "Salesforce",
+      "PeopleSoft",
+      "Workday",
+      "ADP",
+      "Taleo",
+      "iCIMS",
+      "LinkedIn Recruiter",
+      "BrassRing"
+    ],
+    "IDE": [
+      "Eclipse",
+      "IntelliJ IDEA",
+      "Visual Studio",
+      "VS Code",
+      "NetBeans",
+      "PyCharm",
+      "RAD",
+      "Android Studio",
+      "Sublime Text",
+      "Atom"
+    ],
+    "Networking": [
+      "TCP/IP",
+      "DNS",
+      "DHCP",
+      "VPN",
+      "Firewall",
+      "Load Balancing",
+      "LAN/WAN",
+      "Active Directory",
+      "LDAP",
+      "VMware",
+      "Citrix",
+      "Cisco"
+    ],
+    "Soft Skill": [
+      "Communication",
+      "Teamwork",
+      "Leadership",
+      "Problem Solving",
+      "Time Management",
+      "Critical Thinking",
+      "Analytical Skills",
+      "Project Management",
+      "Stakeholder Management",
+      "Requirements Gathering",
+      "Business Analysis",
+      "Documentation",
+      "Mentoring",
+      "Presentation",
+      "Negotiation",
+      "Conflict Resolution",
+      "Client Management",
+      "Vendor Management",
+      "Budget Management",
+      "Risk Management",
+      "Change Management",
+      "Strategic Planning",
+      "Recruitment",
+      "Sourcing",
+      "Interviewing",
+      "Onboarding",
+      "Performance Management",
+      "Employee Relations"
+    ],
+    "Design": [
+      "UML",
+      "Design Patterns",
+      "MVC",
+      "SOA",
+      "OOP",
+      "OOAD",
+      "Data Structures",
+      "Algorithms",
+      "System Design"
+    ]
+  }
 }
