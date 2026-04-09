@@ -380,30 +380,40 @@ export default function Analyze() {
                   className="flex flex-wrap gap-1.5 max-h-[300px] overflow-y-auto"
                   data-testid="container-skills"
                 >
-                  {(parsedResume.skills || []).map((skill) => {
-                      const s = parsedResume.skill_scores?.[skill] ?? 0;
-                      const colorClass =
-                        s >= 0.8
-                          ? "bg-chart-1/15 text-chart-1 border-chart-1/20"
-                          : s >= 0.5
-                            ? "bg-chart-3/15 text-chart-3 border-chart-3/20"
-                            : "bg-muted text-muted-foreground border-border";
-                      return (
-                        <Badge
-                          key={skill}
-                          variant="outline"
-                          className={`text-[11px] font-medium ${colorClass}`}
-                          data-testid={`badge-skill-${skill}`}
-                        >
-                          {skill}
-                          {s > 0 && (
-                            <span className="ml-1 opacity-60 tabular-nums">
-                              {(s * 100).toFixed(0)}
-                            </span>
-                          )}
-                        </Badge>
+                  {(() => {
+                      const scores = parsedResume.skill_scores ?? {};
+                      const maxScore = Math.max(...Object.values(scores) as number[], 1);
+                      // Sort skills by score descending so highest-confidence skills appear first
+                      const sortedSkills = [...(parsedResume.skills || [])].sort(
+                        (a, b) => (scores[b] ?? 0) - (scores[a] ?? 0)
                       );
-                    })}
+                      return sortedSkills.map((skill) => {
+                        const s = scores[skill] ?? 0;
+                        // Normalize to 0-100 confidence relative to max score
+                        const pct = Math.round((s / maxScore) * 100);
+                        const colorClass =
+                          pct >= 70
+                            ? "bg-chart-1/15 text-chart-1 border-chart-1/20"
+                            : pct >= 40
+                              ? "bg-chart-3/15 text-chart-3 border-chart-3/20"
+                              : "bg-muted text-muted-foreground border-border";
+                        return (
+                          <Badge
+                            key={skill}
+                            variant="outline"
+                            className={`text-[11px] font-medium ${colorClass}`}
+                            data-testid={`badge-skill-${skill}`}
+                          >
+                            {skill}
+                            {pct > 0 && (
+                              <span className="ml-1 opacity-60 tabular-nums">
+                                {pct}%
+                              </span>
+                            )}
+                          </Badge>
+                        );
+                      });
+                    })()}
                 </div>
               </CardContent>
             </Card>
