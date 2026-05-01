@@ -116,10 +116,16 @@ def compute_gap(
 
     gap_score = sum(w for _, w in weighted_missing)
 
+    # Normalize priority_scores so the top skill = 1.0.
+    # This ensures priority_score * 100 gives a meaningful 0-100% display
+    # in the frontend regardless of the absolute scale of cluster_freq values.
+    max_weight = weighted_missing[0][1] if weighted_missing else 1.0
+    norm = max_weight if max_weight > 0 else 1.0
+
     recommendations = [
         {
             "skill": skill,
-            "priority_score": weight,
+            "priority_score": round(weight / norm, 4),
             "is_required": skill in req_skills,
             "cluster_frequency": round(cluster_freq.get(skill, 0.0), 4),
         }
