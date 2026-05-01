@@ -125,6 +125,7 @@ class RoleMatcher:
                 "matched_required": sorted(req_match),
                 "matched_preferred": sorted(pref_match),
                 "missing_required": sorted(req - cand_skills),
+                "missing_preferred": sorted(pref - cand_skills),
             })
 
         results.sort(key=lambda r: -r["score"])
