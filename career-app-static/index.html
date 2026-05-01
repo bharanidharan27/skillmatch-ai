@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
@@ -10,11 +10,92 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+      // Apply saved theme before paint to avoid flash
+      (function(){
+        var saved = localStorage.getItem('skillmatch-theme');
+        if(saved === 'light') {
+          document.documentElement.classList.remove('dark');
+        } else {
+          // Default to dark
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
     <script type="module" crossorigin src="./assets/index-DSsGtbA1.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-DTtYguQY.css">
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Theme toggle button -->
+    <button
+      id="theme-toggle"
+      aria-label="Toggle light/dark mode"
+      title="Toggle light/dark mode"
+      style="
+        position: fixed;
+        top: 14px;
+        right: 16px;
+        z-index: 9999;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 1px solid rgba(128,128,128,0.25);
+        background: rgba(128,128,128,0.12);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        line-height: 1;
+        transition: background 0.2s, border-color 0.2s, transform 0.15s;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+      "
+      onmouseover="this.style.transform='scale(1.1)'"
+      onmouseout="this.style.transform='scale(1)'"
+    >
+      <span id="theme-icon">🌙</span>
+    </button>
+
+    <script>
+      (function(){
+        var btn = document.getElementById('theme-toggle');
+        var icon = document.getElementById('theme-icon');
+        var html = document.documentElement;
+
+        function isDark() {
+          return html.classList.contains('dark');
+        }
+
+        function updateIcon() {
+          icon.textContent = isDark() ? '🌙' : '☀️';
+          // Adjust button bg based on theme
+          btn.style.background = isDark()
+            ? 'rgba(255,255,255,0.08)'
+            : 'rgba(0,0,0,0.06)';
+          btn.style.borderColor = isDark()
+            ? 'rgba(255,255,255,0.15)'
+            : 'rgba(0,0,0,0.12)';
+        }
+
+        // Set initial icon
+        updateIcon();
+
+        btn.addEventListener('click', function(){
+          if(isDark()) {
+            html.classList.remove('dark');
+            localStorage.setItem('skillmatch-theme', 'light');
+          } else {
+            html.classList.add('dark');
+            localStorage.setItem('skillmatch-theme', 'dark');
+          }
+          updateIcon();
+        });
+      })();
+    </script>
   <script data-pplx-inline-edit>
 (function(){
   if(window===window.top)return;
